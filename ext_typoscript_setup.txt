@@ -1,0 +1,19 @@
+config.tx_extbase{
+    persistence{
+        classes{
+
+            Tx_Msrouten_Domain_Model_Guide {
+                mapping {
+                    tableName = tx_news_domain_model_news
+                    recordType = Tx_Msrouten_Guide
+                }
+            }
+            
+    	}
+    }
+}
+plugin.tx_msrouten {
+	settings {
+		route_sort_field = uid
+	}
+}
