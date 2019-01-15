@@ -368,7 +368,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * walls
 	 *
-	 * @var Walls
+	 * @var \Bertigolf\Msrouten\Domain\Model\Walls
 	 * @lazy
 	 * 
 	 */
@@ -542,7 +542,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the guide
 	 *
-	 * @return Guide $guide
+	 * @return void $guide
 	 */
 	public function getGuide() {
 	       if ($this->guide instanceof \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy) {
@@ -604,7 +604,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the walls
 	 *
-	 * @return Walls walls
+	 * @return \Bertigolf\Msrouten\Domain\Model\Walls walls
 	 */
 	public function getWalls() {
 		if ($this->walls instanceof \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy) {
@@ -616,10 +616,10 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the walls
 	 *
-	 * @param Walls $walls
+	 * @param \Bertigolf\Msrouten\Domain\Model\Walls $walls
 	 * 
 	 */
-	public function setWalls(Walls $walls) {
+	public function setWalls(\Bertigolf\Msrouten\Domain\Model\Walls $walls) {
 		$this->walls = $walls;
 	}
 

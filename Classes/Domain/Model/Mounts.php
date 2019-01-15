@@ -86,14 +86,14 @@ class Mounts extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * gebirge
 	 *
-	 * @var Tx_Msrouten_Domain_Model_Gebirge
+	 * @var  \Bertigolf\Msrouten\Domain\Model\Gebirge
 	 */
 	protected $gebirge;
 
 	/**
 	 * karte
 	 *
-	 * @var Tx_Msrouten_Domain_Model_Karten
+	 * @var  \Bertigolf\Msrouten\Domain\Model\Karten
 	 */
 	protected $karte;
 
@@ -214,7 +214,7 @@ class Mounts extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the gebirge
 	 *
-	 * @return Gebirge gebirge
+	 * @return  \Bertigolf\Msrouten\Domain\Model\Gebirge gebirge
 	 */
 	public function getGebirge() {
 		return $this->gebirge;
@@ -223,17 +223,17 @@ class Mounts extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the gebirge
 	 *
-	 * @param Gebirge $gebirge
+	 * @param  \Bertigolf\Msrouten\Domain\Model\Gebirge $gebirge
 	 * @return void
 	 */
-	public function setGebirge(Gebirge $gebirge) {
+	public function setGebirge( \Bertigolf\Msrouten\Domain\Model\Gebirge $gebirge) {
 		$this->gebirge = $gebirge;
 	}
 
 	/**
 	 * Returns the karte
 	 *
-	 * @return Karten $karte
+	 * @return  \Bertigolf\Msrouten\Domain\Model\Karten $karte
 	 */
 	public function getKarte() {
 		return $this->karte;
@@ -242,10 +242,10 @@ class Mounts extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the karte
 	 *
-	 * @param Karten $karte
+	 * @param  \Bertigolf\Msrouten\Domain\Model\Karten $karte
 	 * @return void
 	 */
-	public function setKarte(Karten $karte) {
+	public function setKarte( \Bertigolf\Msrouten\Domain\Model\Karten $karte) {
 		$this->karte = $karte;
 	}
 
