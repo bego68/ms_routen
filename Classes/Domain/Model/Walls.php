@@ -57,14 +57,14 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * wallPictures
 	 *
-	 * @var Pictures
+	 * @var \Bertigolf\Msrouten\Domain\Model\Pictures
 	 */
 	protected $wallPictures;
 
 	/**
 	 * mounts
 	 *
-	 * @var Mounts
+	 * @var  \Bertigolf\Msrouten\Domain\Model\Mounts
 	 */
 	protected $mounts;
 
@@ -109,7 +109,7 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the wallPictures
 	 *
-	 * @return Pictures $wallPictures
+	 * @return \Bertigolf\Msrouten\Domain\Model\Pictures $wallPictures
 	 */
 	public function getWallPictures() {
 		return $this->wallPictures;
@@ -118,10 +118,10 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the wallPictures
 	 *
-	 * @param Pictures $wallPictures
+	 * @param \Bertigolf\Msrouten\Domain\Model\Pictures $wallPictures
 	 * @return void
 	 */
-	public function setWallPictures(Pictures $wallPictures) {
+	public function setWallPictures(\Bertigolf\Msrouten\Domain\Model\Pictures $wallPictures) {
 		$this->wallPictures = $wallPictures;
 	}
 
@@ -147,7 +147,7 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the mounts
 	 *
-	 * @return Mounts mounts
+	 * @return \Bertigolf\Msrouten\Domain\Model\Mounts mounts
 	 */
 	public function getMounts() {
 		return $this->mounts;
@@ -156,10 +156,10 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the mounts
 	 *
-	 * @param Mounts $mounts
+	 * @param  \Bertigolf\Msrouten\Domain\Model\Mounts $mounts
 	 *
 	 */
-	public function setMounts(Mounts $mounts) {
+	public function setMounts( \Bertigolf\Msrouten\Domain\Model\Mounts $mounts) {
 		$this->mounts = $mounts;
 	}
 
