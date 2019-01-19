@@ -830,6 +830,20 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 				'eval' => 'int'
 			),
 		),
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'type' => 'slug',
+				'prependSlash' => true,
+				'generatorOptions' => [
+					'fields' => ['routen_name'],
+					'prefixParentPageSlug' => true,
+				],
+				'fallbackCharacter' => '-',
+				'eval' => 'uniqueInSite',
+			],
+		],
 	),
 
 );
