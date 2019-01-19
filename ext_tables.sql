@@ -55,6 +55,7 @@ CREATE TABLE tx_msrouten_domain_model_routes (
 	linkextern text NOT NULL,
 	walls int(11) unsigned DEFAULT '0',
 	guide int(11) unsigned DEFAULT '0',
+	slug  varchar(255),
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
