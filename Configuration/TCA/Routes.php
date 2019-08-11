@@ -841,6 +841,12 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
             'prefixParentPageSlug' => true,
             'replacements' => [
                 '/' => '',
+                ', ' => '',
+                '(' => '',
+                ')' => '',
+                '"' => '',
+                '.' => ''
+                
             ],
         ],
         'fallbackCharacter' => '-',
