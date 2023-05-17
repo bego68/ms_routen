@@ -37,7 +37,7 @@ class Mounts extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Name des Berges
 	 *
 	 * @var string
-	 * @validate NotEmpty
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\validate NotEmpty
 	 */
 	protected $mountName;
 
