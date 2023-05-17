@@ -16,8 +16,8 @@
 	<f:image src="fileadmin/images/pdfDownload.png" width="50px" height="50px" alt="PDF Download" title="Als PDF-Datei herunterladen"/>
 	</div>
 -->
-	<h3> Kletterrouten {routes.walls.mounts.gebirge.gebirge}  »
-	<f:link.page pageUid="{routes.walls.mounts.mountWayToTop}">{routes.walls.mounts.mountName}</f:link.page> - {routes.walls.wallName}</h3>
+	<h3> <f:link.page pageUid="{routes.walls.mounts.mountWayToBot}">Kletterrouten {routes.walls.mounts.gebirge.gebirge}</f:link.page>  »
+	<f:link.page pageUid="{routes.walls.mounts.mountWayToTop}">{routes.walls.mounts.mountName}</f:link.page> » {routes.walls.wallName}</h3>
 	<h1>{routes.routenName}<span class="stern stern{routes.beauty}"></span></h1>
     <div id="msBoxen" class="skitouren">
           <div id="msBoxenItem" class="">
@@ -135,21 +135,20 @@
 		  </f:if>
 	<!--
     =====================   Werbebanner - Anfang   ===================== 
-    -->
+     -->
 		  <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture wandbild">  
-		    <f:link.external uri="https://www.ortovox.com/de/safety-academy-lab-rock/kapitel-4-alpine-rettung/?utm_source=markusstadler&utm_medium=banner&utm_campaign=firstaid" 
+		    <f:link.external uri="https://ortovox.com/de-de/far-and-light?utm_source=markusstadler&utm_medium=banner&utm_campaign=awareness-farlight-summer23" 
 						  target="_blank" rel="nofollow">
 			     <sms:image 
-			          src="fileadmin/images/allgemeines/bannerOrtovox/190424_ErsteHilfe_1200x148_DE_MAH.gif" 
-			          alt="Ortovox"  
-			          title="Ortovox"
-			          width="1199"
+			          src="fileadmin/images/allgemeines/bannerOrtovox/230315_Online_Banner_Statisch_1200x148_LRZ_Far_Light_M.jpg" 
+			          alt="Ortovox - Far & Light Collection"  
+			          title="Ortovox - Far & Light Collection"
 			          srcset="400,900,1199"
 			          sizes="70vw"
 		         />
 		    </f:link.external>
 		 </div>
-	<!--
+	<!--	
     =====================   Werbebanner - Ende  ===================== 
     -->
 	      <f:if condition="{routes.zustieg}">
