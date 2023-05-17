@@ -69,7 +69,7 @@ $TCA['tx_msrouten_domain_model_routes'] = array(
 		),
 		'searchFields' => 'routen_name,level_short,erstbegeher,level,elevel,climbtime,climbdistance,exposition,wandhoehe,material,beauty,frequenz,route_description,level_long,absicherung,zustieg,einstieg,huette,hints,abstieg,verlauf,erstbegeher_lang,quelle,topo,topo_bu,topo_alt,topo_title,wandbild,wandbild_bu,wandbild_alt,wandbild_title,action_bild1,action_bild1_bu,action_bild1_alt,actionbild1_title,action_bild2,action_bild2_bu,action_bild2_alt,action_bild2_title,action_bild3,action_bild3_bu,action_bild3_alt,action_bild3_title,galerie,pdf,linkextern,walls,guide,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Routes.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_routes.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_routes.gif'
 	),
 );
 
@@ -98,7 +98,7 @@ $TCA['tx_msrouten_domain_model_mounts'] = array(
 		),
 		'searchFields' => 'mount_name,mount_description,height,mount_location_n,mount_location_o,mount_way_to_top,mount_way_to_bot,gebirge,karte,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Mounts.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_mounts.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_mounts.gif'
 	),
 );
 
@@ -129,7 +129,7 @@ $TCA['tx_msrouten_domain_model_walls'] = array(
 		),
 		'searchFields' => 'wall_name,wall_description,wall_height,wall_pictures,mounts,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Walls.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_walls.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_walls.gif'
 	),
 );
 
@@ -158,7 +158,7 @@ $TCA['tx_msrouten_domain_model_pictures'] = array(
 		),
 		'searchFields' => 'picture_wall,wall_pic_bu,wall_pic_alt,wall_pic_title,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Pictures.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_pictures.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_pictures.gif'
 	),
 );
 
@@ -245,7 +245,7 @@ $TCA['tx_msrouten_domain_model_karten'] = array(
 		),
 		'searchFields' => 'karten_name,nummer,massstab,land,isbn13,asin,stand,zone,li_unten_utm_rechts,uli_unten_utm_hoch,li_oben_utm_rechts,li_oben_utm_hoch,re_oben_utm_rechts,re_oben_utm_hoch,re_unten_utm_rechts,re_unten_utm_hoch,zone2,li_unten_utm_rechts2,li_unten_utm_hoch2,li_oben_utm_rechts2,li_oben_utm_hoch2,re_oben_utm_rechts2,re_oben_utm_hoch2,re_unten_utm_rechts2,re_unten_utm_hoch2,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Karten.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_karten.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_karten.gif'
 	),
 );
 
@@ -274,7 +274,7 @@ $TCA['tx_msrouten_domain_model_gebirge'] = array(
 		),
 		'searchFields' => 'gebirge,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Gebirge.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_gebirge.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Resources/Public/Icons/tx_msrouten_domain_model_gebirge.gif'
 	),
 );
 

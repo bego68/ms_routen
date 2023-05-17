@@ -92,7 +92,7 @@ class RoutesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 *
 	 * @param Routes $routes
 	 * @param boolean $pdf
-	 * @ignorevalidation $routes
+	 * @TYPO3\\CMS\\extbase\\Annotation\\ignorevalidation $routes
 	 *
 	 * @return void
 	 */

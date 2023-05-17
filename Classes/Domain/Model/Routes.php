@@ -38,7 +38,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Routenname
 	 *
 	 * @var string
-	 * @validate NotEmpty
+	 * @TYPO3\\CMS\\Extbase\\Annotations\\validate NotEmpty
 	 */
 	protected $routenName;
 
@@ -369,7 +369,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * walls
 	 *
 	 * @var \Bertigolf\Msrouten\Domain\Model\Walls
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotations\\lazy
 	 * 
 	 */
 	protected $walls;
@@ -378,7 +378,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Führer
 	 *
 	 * @var \GeorgRinger\News\Domain\Model\News 
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotations\\lazy
 	 */
 	protected $guide;
 

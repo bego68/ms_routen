@@ -37,7 +37,7 @@ class Guide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Name führer
 	 *
 	 * @var string
-	 * @validate NotEmpty
+	 * @TYPOS\\CMS\\Extbase\\Annotations\\validate NotEmpty
 	 */
 	protected $guideName;
 
@@ -45,7 +45,7 @@ class Guide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * guideDescription
 	 *
 	 * @var string
-	 * @validate NotEmpty
+	 * @TYPOS\\CMS\\Extbase\\Annotations\validate NotEmpty
 	 */
 	protected $guideDescription;
 
@@ -53,7 +53,7 @@ class Guide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Autor
 	 *
 	 * @var string
-	 * @validate NotEmpty
+	 * @TYPOS\\CMS\\Extbase\\Annotations\validate NotEmpty
 	 */
 	protected $guideAuthor;
 
