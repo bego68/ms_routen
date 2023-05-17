@@ -1,9 +1,23 @@
 {namespace geo=Bertigolf\Bertigolfnewsgeo\ViewHelpers}
-<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	
+	        
+          <n:titleTag>
+              <f:format.htmlentitiesDecode>Kletterroute {routes.walls.mounts.gebirge.gebirge}:{routes.walls.mounts.mountName}-{routes.routenName}</f:format.htmlentitiesDecode>
+            </n:titleTag>
+	<!--
+  =====================
+    Downloadbottom für PDF vorübergehend ausgeblendet
+
 	<div id="funktionsbuttons" class="">
 	<f:image src="fileadmin/images/pdfDownload.png" width="50px" height="50px" alt="PDF Download" title="Als PDF-Datei herunterladen"/>
 	</div>
-	<h3>{routes.walls.mounts.gebirge.gebirge} > {routes.walls.mounts.mountName} > {routes.walls.wallName} </h3>
+-->
+	<h3> <f:link.page pageUid="{routes.walls.mounts.mountWayToBot}">Kletterrouten {routes.walls.mounts.gebirge.gebirge}</f:link.page>  »
+	<f:link.page pageUid="{routes.walls.mounts.mountWayToTop}">{routes.walls.mounts.mountName}</f:link.page> » {routes.walls.wallName}</h3>
 	<h1>{routes.routenName}<span class="stern stern{routes.beauty}"></span></h1>
     <div id="msBoxen" class="skitouren">
           <div id="msBoxenItem" class="">
@@ -61,8 +75,10 @@
             <table> 
               <tr>
                 <th>Beliebtheit</th>
-				 <th rowspan="2"><f:image src="fileadmin/images/bibliothek/wilderkaiser2.jpg" width="auto" height="110px" alt="Kletterführer Wilder Kaiser" title="Kletterführer Wilder Kaiser"/></th>
-              </tr>
+			       <f:if condition="{routes.guide}">
+			      
+                      <th rowspan="2"><f:render section="guide" arguments="{newsItem:routes.guide}"/></th>
+			       </f:if>
               <tr>
                 <td class="frequenz frequenz{routes.frequenz}"><span> </span></td>
               </tr>
@@ -80,7 +96,9 @@
 			          srcset="400,900,1199"
 			          sizes="70vw"
 		         />
+			 <f:format.html>{routes.wandbildBu}</f:format.html>
 		 </div>
+		 
 	</f:if>	
           <f:if condition="{routes.routeDescription}">
 			  <div id="msBoxenItem" class="standard TeaserLarge">
@@ -115,6 +133,24 @@
                   <f:format.html>{routes.erstbegeherLang}</f:format.html>
             </div>
 		  </f:if>
+	<!--
+    =====================   Werbebanner - Anfang   ===================== 
+     -->
+		  <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture wandbild">  
+		    <f:link.external uri="https://ortovox.com/de-de/far-and-light?utm_source=markusstadler&utm_medium=banner&utm_campaign=awareness-farlight-summer23" 
+						  target="_blank" rel="nofollow">
+			     <sms:image 
+			          src="fileadmin/images/allgemeines/bannerOrtovox/230315_Online_Banner_Statisch_1200x148_LRZ_Far_Light_M.jpg" 
+			          alt="Ortovox - Far & Light Collection"  
+			          title="Ortovox - Far & Light Collection"
+			          srcset="400,900,1199"
+			          sizes="70vw"
+		         />
+		    </f:link.external>
+		 </div>
+	<!--	
+    =====================   Werbebanner - Ende  ===================== 
+    -->
 	      <f:if condition="{routes.zustieg}">
 			<div id="msBoxenItem" class="standard TeaserXLarge">
 				  <h4>Zustieg</h4>
@@ -157,12 +193,12 @@
                   <f:format.html>{routes.quelle}</f:format.html>
             </div>
 		  </f:if>
-			<div id="msBoxenItem" class="standard TeaserLarge">
 		       <f:if condition="{routes.linkextern}">
+			 <div id="msBoxenItem" class="standard TeaserLarge">
 				  <h4>Externer Link</h4>
                   <f:format.html>{routes.linkextern}</f:format.html>
-				</f:if>
             </div>
+				   </f:if>
 		  
 </div>
 <div id="msBoxen" class="">
@@ -226,4 +262,33 @@
 		 </div>
 	</f:if>	
 	  </div>
+	
+	<f:section name="guide">
+      <div class="news-img-wrap">
+        <geo:link newsItem="{newsItem}" settings="{settings}">
+              <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+                <f:if condition="{mediaElement}">
+                <f:if condition="{mediaElement.type} == 0">
+                  <f:image
+                    image="{mediaElement}"
+                    title="{mediaElement.title}"
+                    alt="{mediaElement.alt}"
+                    maxWidth="90"
+                    maxHeight="120"
+                    /> 
+                </f:if>
+                <f:if condition="{mediaElement.type} == 1">
+                  <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}" />
+                </f:if>
+                <f:if condition="{mediaElement.type} == 2">
+                  <f:render partial="Detail/MediaHtml" arguments="{mediaElement: mediaElement}" />
+                </f:if>
+                <f:if condition="{mediaElement.type} == 3">
+                </f:if>
+                </f:if>
+              </f:alias>
+        </geo:link>
+      </div>
+    </f:section>
+	
 </html>

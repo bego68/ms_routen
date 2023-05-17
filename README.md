@@ -1,4 +1,4 @@
 # ms_routen
-Kletter-Routendatenbank für typo3
+Routendatenbank für typo3
 
-Erstellt eine Kletterroutendatenbank, in der Kletterouten gespeichert werden.
+Die Extension dient dazu Kletterrouten zu verwalten und anzuzeigen

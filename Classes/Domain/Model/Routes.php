@@ -377,7 +377,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Führer
 	 *
-	 * @var Guide
+	 * @var \GeorgRinger\News\Domain\Model\News 
 	 * @lazy
 	 */
 	protected $guide;
@@ -548,8 +548,8 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	       if ($this->guide instanceof \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy) {
 	        $this->guide->_loadRealInstance();
 	        }
-		$pfad = MSROUTEN_EINZELANSICHT_PFAD;
-		return str_replace ( 'record:tt_news:', $pfad ,$this->guide);
+		// $pfad = MSROUTEN_EINZELANSICHT_PFAD;
+		return $this->guide;
 		
 	}
 
