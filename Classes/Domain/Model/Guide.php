@@ -23,7 +23,8 @@ namespace Bertigolf\Msrouten\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 /**
  *
  *
@@ -31,13 +32,13 @@ namespace Bertigolf\Msrouten\Domain\Model;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Guide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Guide extends AbstractEntity {
 
 	/**
 	 * Name führer
 	 *
 	 * @var string
-	 * @TYPOS\\CMS\\Extbase\\Annotations\\validate NotEmpty
+	 * @Validate NotEmpty
 	 */
 	protected $guideName;
 
@@ -45,7 +46,7 @@ class Guide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * guideDescription
 	 *
 	 * @var string
-	 * @TYPOS\\CMS\\Extbase\\Annotations\validate NotEmpty
+	 * @Validate NotEmpty
 	 */
 	protected $guideDescription;
 
@@ -53,7 +54,7 @@ class Guide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Autor
 	 *
 	 * @var string
-	 * @TYPOS\\CMS\\Extbase\\Annotations\validate NotEmpty
+	 * @Validate NotEmpty
 	 */
 	protected $guideAuthor;
 

@@ -13,7 +13,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
 <h3>Übersicht über die Kletterrouten</h3>
-</br>
+<br/>
 <f:flashMessages />
 
 <table  class="tx_msrouten" >
@@ -26,10 +26,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	
 		
 	</tr>
-
-	<f:for each="{routess}" as="routes">
+	<tr>
+		<f:for each="{routess}" as="routes">
 		<tr>
-			<td rowspan="2"><f:link.action action="show" arguments="{routes : routes}" pageUid="{singlePID}" > {routes.routenName} (<f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}" />{routes.alevel})</f:link.action> </td>
+			<td rowspan="2"><f:link.action  action="show" arguments="{routes : routes, pdf : FALSE}" pageUid="{singlePID}" > {routes.routenName}  (<f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}"/>)</f:link.action> </td>
 			<td> {routes.elevel}</td>
 			<td><span class="stern stern{routes.beauty}"> </span></td>
 			<td><span class="frequenz frequenz{routes.frequenz}"> </span></td>
@@ -38,8 +38,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td><b>Länge:</b> {routes.climbdistance}</td>
 			<td><b>Zeit:</b> {routes.climbtime}</td>
 			<td><b>Expos.:</b> {routes.exposition}</td>
-			<td><b>Ebg.:</b> {routes.erstbegeher}</td>
-		</tr>
-	</f:for>
+			<td><b>Ebg.:</b> {routes.erstbegeher}
+   </td>
+	   </tr>
+		</f:for>
 </table>
 </f:section>

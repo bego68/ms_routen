@@ -121,14 +121,10 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_pictures'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_pictures.picture_wall',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'show_thumbs' => 1,
-				'size' => 5,
-				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-				'disallowed' => '',
-			),
+				'type' => 'input',
+				'size' => 30,
+				'max' => 255,
+			)
 		),
 		'wall_pic_bu' => array(
 			'exclude' => 0,

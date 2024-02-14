@@ -23,7 +23,10 @@ namespace Bertigolf\Msrouten\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
+use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
 /**
  *
  *
@@ -32,13 +35,12 @@ namespace Bertigolf\Msrouten\Domain\Model;
  *
  */
  define("MSROUTEN_EINZELANSICHT_PFAD",     "alpinklettern_details.html?&tx_news_pi1%5Btx_news%5D=");
-class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Routes extends AbstractEntity {
 
 	/**
 	 * Routenname
 	 *
 	 * @var string
-	 * @TYPO3\\CMS\\Extbase\\Annotations\\validate NotEmpty
 	 */
 	protected $routenName;
 
@@ -368,8 +370,8 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * walls
 	 *
-	 * @var \Bertigolf\Msrouten\Domain\Model\Walls
-	 * @TYPO3\\CMS\\Extbase\\Annotations\\lazy
+	 * @var Walls
+	 * @Lazy
 	 * 
 	 */
 	protected $walls;
@@ -378,7 +380,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Führer
 	 *
 	 * @var \GeorgRinger\News\Domain\Model\News 
-	 * @TYPO3\\CMS\\Extbase\\Annotations\\lazy
+	 * @lazy
 	 */
 	protected $guide;
 
@@ -545,7 +547,7 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void $guide
 	 */
 	public function getGuide() {
-	       if ($this->guide instanceof \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy) {
+	       if ($this->guide instanceof LazyLoadingProxy) {
 	        $this->guide->_loadRealInstance();
 	        }
 		// $pfad = MSROUTEN_EINZELANSICHT_PFAD;
@@ -604,10 +606,10 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the walls
 	 *
-	 * @return \Bertigolf\Msrouten\Domain\Model\Walls walls
+	 * @return Walls walls
 	 */
 	public function getWalls() {
-		if ($this->walls instanceof \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy) {
+		if ($this->walls instanceof LazyLoadingProxy) {
 		 $this->walls->_loadRealInstance();
 		 }
 		return $this->walls;
@@ -616,10 +618,10 @@ class Routes extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the walls
 	 *
-	 * @param \Bertigolf\Msrouten\Domain\Model\Walls $walls
+	 * @param Walls $walls
 	 * 
 	 */
-	public function setWalls(\Bertigolf\Msrouten\Domain\Model\Walls $walls) {
+	public function setWalls( Walls $walls ) {
 		$this->walls = $walls;
 	}
 

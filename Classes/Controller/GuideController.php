@@ -23,8 +23,9 @@ namespace Bertigolf\Msrouten\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-use  Bertigolf\Msrouten\Domain\Model\Guide;
-use  Bertigolf\Msrouten\Domain\Repository\GuideRepository;
+use Bertigolf\Msrouten\Domain\Model\Guide;
+use Bertigolf\Msrouten\Domain\Repository\GuideRepository;
+use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 /**
  *
  *
@@ -65,7 +66,7 @@ class Tx_Msrouten_Controller_GuideController extends \TYPO3\CMS\Extbase\Mvc\Cont
 	 * action new
 	 *
 	 * @param Guide $newGuide
-	 * @dontvalidate $newGuide
+	 * @IgnoreValidation $newGuide
 	 * @return void
 	 */
 	public function newAction(Guide $newGuide = NULL) {
