@@ -26,6 +26,7 @@ namespace Bertigolf\Msrouten\Controller;
  ***************************************************************/
 use namespace Bertigolf\Msrouten\Domain\Repository\PicturesRepository;
 use namespace Bertigolf\Msrouten\Domain\Model\Pictures;
+use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 /**
  *
  *
@@ -65,7 +66,7 @@ class Tx_Msrouten_Controller_PicturesController extends \TYPO3\CMS\Extbase\Mvc\C
 	 * action new
 	 *
 	 * @param Pictures $newPictures
-	 * @dontvalidate $newPictures
+	 * @IgnoreValidation $newPictures
 	 * @return void
 	 */
 	public function newAction(Pictures $newPictures = NULL) {

@@ -23,7 +23,8 @@ namespace Bertigolf\Msrouten\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 /**
  *
  *
@@ -31,13 +32,12 @@ namespace Bertigolf\Msrouten\Domain\Model;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Mounts extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Mounts extends AbstractEntity {
 
 	/**
 	 * Name des Berges
 	 *
 	 * @var string
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\validate NotEmpty
 	 */
 	protected $mountName;
 

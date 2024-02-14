@@ -468,13 +468,9 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.topo',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'show_thumbs' => 1,
-				'size' => 5,
-				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-				'disallowed' => '',
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'topo_bu' => array(
@@ -523,13 +519,9 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.wandbild',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'show_thumbs' => 1,
-				'size' => 5,
-				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-				'disallowed' => '',
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'wandbild_bu' => array(
@@ -578,13 +570,9 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild1',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'show_thumbs' => 1,
-				'size' => 5,
-				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-				'disallowed' => '',
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'action_bild1_bu' => array(
@@ -633,13 +621,9 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild2',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'show_thumbs' => 1,
-				'size' => 5,
-				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-				'disallowed' => '',
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'action_bild2_bu' => array(
@@ -688,13 +672,9 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild3',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'show_thumbs' => 1,
-				'size' => 5,
-				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-				'disallowed' => '',
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'action_bild3_bu' => array(
@@ -743,24 +723,18 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.galerie',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file_reference',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'allowed' => '*',
-				'disallowed' => 'php',
-				'size' => 5,
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'pdf' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.pdf',
 			'config' => array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'uploadfolder' => 'uploads/tx_msrouten',
-				'allowed' => 'pdf',
-				'disallowed' => 'php',
-				'size' => 5,
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'linkextern' => array(

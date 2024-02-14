@@ -23,6 +23,8 @@ namespace Bertigolf\Msrouten\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+
 
 /**
  *
@@ -57,14 +59,14 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * wallPictures
 	 *
-	 * @var \Bertigolf\Msrouten\Domain\Model\Pictures
+	 * @var Pictures
 	 */
 	protected $wallPictures;
 
 	/**
 	 * mounts
 	 *
-	 * @var  \Bertigolf\Msrouten\Domain\Model\Mounts
+	 * @var Mounts
 	 */
 	protected $mounts;
 
@@ -109,7 +111,7 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the wallPictures
 	 *
-	 * @return \Bertigolf\Msrouten\Domain\Model\Pictures $wallPictures
+	 * @return Pictures $wallPictures
 	 */
 	public function getWallPictures() {
 		return $this->wallPictures;
@@ -118,10 +120,10 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the wallPictures
 	 *
-	 * @param \Bertigolf\Msrouten\Domain\Model\Pictures $wallPictures
+	 * @param Pictures $wallPictures
 	 * @return void
 	 */
-	public function setWallPictures(\Bertigolf\Msrouten\Domain\Model\Pictures $wallPictures) {
+	public function setWallPictures(Pictures $wallPictures) {
 		$this->wallPictures = $wallPictures;
 	}
 
@@ -147,7 +149,7 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the mounts
 	 *
-	 * @return \Bertigolf\Msrouten\Domain\Model\Mounts mounts
+	 * @return Mounts mounts
 	 */
 	public function getMounts() {
 		return $this->mounts;
@@ -156,10 +158,10 @@ class Walls extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the mounts
 	 *
-	 * @param  \Bertigolf\Msrouten\Domain\Model\Mounts $mounts
+	 * @param Mounts $mounts
 	 *
 	 */
-	public function setMounts( \Bertigolf\Msrouten\Domain\Model\Mounts $mounts) {
+	public function setMounts( Mounts $mounts) {
 		$this->mounts = $mounts;
 	}
 

@@ -25,6 +25,8 @@ namespace Bertigolf\Msrouten\Controller;
  ***************************************************************/
 use Bertigolf\Msrouten\Domain\Model\Routes;
 use Bertigolf\Msrouten\Domain\Repository\RoutesRepository;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+
 /**
  *
  *
@@ -32,14 +34,14 @@ use Bertigolf\Msrouten\Domain\Repository\RoutesRepository;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class RoutesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class RoutesController extends ActionController {
 
 	/**
 	 * routesRepository
 	 *
 	 * @var RoutesRepository
 	 */
-	protected $routesRepository;
+	protected RoutesRepository $routesRepository;
 
 	/**
 	 * action list
@@ -91,12 +93,11 @@ class RoutesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 * action show
 	 *
 	 * @param Routes $routes
-	 * @param boolean $pdf
-	 * @TYPO3\\CMS\\extbase\\Annotation\\ignorevalidation $routes
+	 * @param bool $pdf
 	 *
 	 * @return void
 	 */
-	public function showAction(Routes $routes, $pdf=FALSE) {	
+	public function showAction( Routes $routes, bool $pdf=FALSE) {	
 		$this->view->assign('routes', $routes);
 		$this->view->assign('pdf', $pdf);
 	}

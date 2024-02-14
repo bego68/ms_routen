@@ -23,7 +23,8 @@
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-
+use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 /**
  *
  *
@@ -31,7 +32,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Msrouten_Controller_WallsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class Tx_Msrouten_Controller_WallsController extends ActionController {
 
 	/**
 	 * wallsRepository
@@ -64,7 +65,7 @@ class Tx_Msrouten_Controller_WallsController extends \TYPO3\CMS\Extbase\Mvc\Cont
 	 * action new
 	 *
 	 * @param Tx_Msrouten_Domain_Model_Walls $newWalls
-	 * @dontvalidate $newWalls
+	 * @IgnoreValidation; $newWalls
 	 * @return void
 	 */
 	public function newAction(Tx_Msrouten_Domain_Model_Walls $newWalls = NULL) {

@@ -88,13 +88,11 @@
 <div id="msBoxen" class="">
 	<f:if condition="{routes.wandbild}">
 	     <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture wandbild">  
-			<sms:image 
+			<f:image 
 			          src="uploads/tx_msrouten/{routes.wandbild}" 
 			          alt="{routes.wandbildAlt}"  
 			          title="{routes.wandbildTitle}"
 			          width="1199"
-			          srcset="400,900,1199"
-			          sizes="70vw"
 		         />
 			 <f:format.html>{routes.wandbildBu}</f:format.html>
 		 </div>
@@ -139,12 +137,10 @@
 		  <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture wandbild">  
 		    <f:link.external uri="https://ortovox.com/de-de/far-and-light?utm_source=markusstadler&utm_medium=banner&utm_campaign=awareness-farlight-summer23" 
 						  target="_blank" rel="nofollow">
-			     <sms:image 
+			     <f:image 
 			          src="fileadmin/images/allgemeines/bannerOrtovox/230315_Online_Banner_Statisch_1200x148_LRZ_Far_Light_M.jpg" 
 			          alt="Ortovox - Far & Light Collection"  
 			          title="Ortovox - Far & Light Collection"
-			          srcset="400,900,1199"
-			          sizes="70vw"
 		         />
 		    </f:link.external>
 		 </div>
@@ -210,13 +206,11 @@
               <tr><td align="center">	
 		 <f:if condition="{routes.topo}">
 		 	<f:then>
-			       	<sms:image 
+			       	<f:image 
                                   src="uploads/tx_msrouten/{routes.topo}" 
                                   alt="{routes.topoAlt}"  
                                   title="{routes.topoTitle}"
                                   width="1199"
-                                  srcset="400,900,1199"
-                                  sizes="70vw"
                          />
 			                <f:format.html>{routes.topoBu}</f:format.html>
 			            </f:then>
@@ -232,31 +226,25 @@
 	<f:if condition="{routes.actionBild1}">
 	     <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture aktionbildKlettern"> 
 			 <h2>Fotos aus der Route</h2>
-			<sms:image 
+			<f:image 
                                   src="uploads/tx_msrouten/{routes.actionBild1}" 
                                   alt="{routes.actionBild1Alt}"  
                                   title="{routes.actionBild1Title}"
                                   width="1199"
-                                  srcset="400,900,1199"
-                                  sizes="70vw"
                          />
 			<f:format.html>{routes.actionBild1Bu}</f:format.html>
-			<sms:image 
+			<f:image 
                                   src="uploads/tx_msrouten/{routes.actionBild2}" 
                                   alt="{routes.actionBild2Alt}"  
                                   title="{routes.actionBild2Title}"
                                   width="1199"
-                                  srcset="400,900,1199"
-                                  sizes="70vw"
                          />
 			<f:format.html>{routes.actionBild2Bu}</f:format.html>
-			<sms:image 
+			<f:image 
                                   src="uploads/tx_msrouten/{routes.actionBild3}" 
                                   alt="{routes.actionBild3Alt}"  
                                   title="{routes.actionBild3Title}"
                                   width="1199"
-                                  srcset="400,900,1199"
-                                  sizes="70vw"
                          />
 			<f:format.html>{routes.actionBild3Bu}</f:format.html>			 
 		 </div>
