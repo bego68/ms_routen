@@ -34,7 +34,7 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Msrouten_Controller_PicturesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class PicturesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	/**
 	 * picturesRepository
 	 *
