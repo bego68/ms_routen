@@ -25,7 +25,7 @@ namespace Bertigolf\Msrouten\Controller;
  ***************************************************************/
 use Bertigolf\Msrouten\Domain\Model\Mounts;
 use Bertigolf\Msrouten\Domain\Repository\MountsRepository;
-use TYPO3\CMS\Extbase\Annotation\IgnoreValidation
+use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 /**
  *
  *

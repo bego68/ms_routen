@@ -380,7 +380,7 @@ class Routes extends AbstractEntity {
 	 * Führer
 	 *
 	 * @var \GeorgRinger\News\Domain\Model\News 
-	 * @lazy
+	 * @Lazy
 	 */
 	protected $guide;
 

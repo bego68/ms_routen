@@ -1,5 +1,5 @@
 <?php
-namespace Bertigolf\Msrouten\Domain\Repository
+namespace Bertigolf\Msrouten\Domain\Repository;
 /***************************************************************
  *  Copyright notice
  *
