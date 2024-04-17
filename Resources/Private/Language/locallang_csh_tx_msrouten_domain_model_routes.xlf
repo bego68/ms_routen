@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:10:40Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="routen_name.description" resname="routen_name.description" >
+				<source>Routenname</source>
+			</trans-unit>
+			<trans-unit id="level_short.description" resname="level_short.description" >
+				<source>Schwierigkeit kurz</source>
+			</trans-unit>
+			<trans-unit id="erstbegeher.description" resname="erstbegeher.description" >
+				<source>Erstbegeher</source>
+			</trans-unit>
+			<trans-unit id="level.description" resname="level.description" >
+				<source>Schwierigkeit</source>
+			</trans-unit>
+			<trans-unit id="elevel.description" resname="elevel.description" >
+				<source>E-Bewertung</source>
+			</trans-unit>
+			<trans-unit id="climbtime.description" resname="climbtime.description" >
+				<source>Kletterzeit</source>
+			</trans-unit>
+			<trans-unit id="climbdistance.description" resname="climbdistance.description" >
+				<source>Kletterlänge</source>
+			</trans-unit>
+			<trans-unit id="exposition.description" resname="exposition.description" >
+				<source>Exposition</source>
+			</trans-unit>
+			<trans-unit id="wandhoehe.description" resname="wandhoehe.description" >
+				<source>Wandhöhe</source>
+			</trans-unit>
+			<trans-unit id="material.description" resname="material.description" >
+				<source>Ausrüstung</source>
+			</trans-unit>
+			<trans-unit id="beauty.description" resname="beauty.description" >
+				<source>Schönheit</source>
+			</trans-unit>
+			<trans-unit id="frequenz.description" resname="frequenz.description" >
+				<source>Frequenz</source>
+			</trans-unit>
+			<trans-unit id="route_description.description" resname="route_description.description" >
+				<source>Charakter</source>
+			</trans-unit>
+			<trans-unit id="level_long.description" resname="level_long.description" >
+				<source>Schwierigkeit Text</source>
+			</trans-unit>
+			<trans-unit id="absicherung.description" resname="absicherung.description" >
+				<source>Absicherung</source>
+			</trans-unit>
+			<trans-unit id="zustieg.description" resname="zustieg.description" >
+				<source>Zustieg</source>
+			</trans-unit>
+			<trans-unit id="einstieg.description" resname="einstieg.description" >
+				<source>Einstieg</source>
+			</trans-unit>
+			<trans-unit id="huette.description" resname="huette.description" >
+				<source>Stützpunkt</source>
+			</trans-unit>
+			<trans-unit id="hints.description" resname="hints.description" >
+				<source>Hinweise</source>
+			</trans-unit>
+			<trans-unit id="abstieg.description" resname="abstieg.description" >
+				<source>Abstieg</source>
+			</trans-unit>
+			<trans-unit id="verlauf.description" resname="verlauf.description" >
+				<source>Routenverlauf</source>
+			</trans-unit>
+			<trans-unit id="erstbegeher_lang.description" resname="erstbegeher_lang.description" >
+				<source>Topo Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="quelle.description" resname="quelle.description" >
+				<source>Informationsquelle</source>
+			</trans-unit>
+			<trans-unit id="topo.description" resname="topo.description" >
+				<source>Topo</source>
+			</trans-unit>
+			<trans-unit id="topo_bu.description" resname="topo_bu.description" >
+				<source>Topo Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="topo_alt.description" resname="topo_alt.description" >
+				<source>Topo AltText</source>
+			</trans-unit>
+			<trans-unit id="topo_title.description" resname="topo_title.description" >
+				<source>Topo TitleText</source>
+			</trans-unit>
+			<trans-unit id="wandbild.description" resname="wandbild.description" >
+				<source>Wandbild</source>
+			</trans-unit>
+			<trans-unit id="wandbild_bu.description" resname="wandbild_bu.description" >
+				<source>Wandbild Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="wandbild_alt.description" resname="wandbild_alt.description" >
+				<source>Wandbild AltText </source>
+			</trans-unit>
+			<trans-unit id="wandbild_title.description" resname="wandbild_title.description" >
+				<source>Wandbild TitleText </source>
+			</trans-unit>
+			<trans-unit id="action_bild1.description" resname="action_bild1.description" >
+				<source>Actionbild 1</source>
+			</trans-unit>
+			<trans-unit id="action_bild1_bu.description" resname="action_bild1_bu.description" >
+				<source>Actionbild1 Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="action_bild1_alt.description" resname="action_bild1_alt.description" >
+				<source>Actionbild 1 AltText</source>
+			</trans-unit>
+			<trans-unit id="actionbild1_title.description" resname="actionbild1_title.description" >
+				<source>Actionbild 1 TitleText</source>
+			</trans-unit>
+			<trans-unit id="action_bild2.description" resname="action_bild2.description" >
+				<source>Actionbild 2 </source>
+			</trans-unit>
+			<trans-unit id="action_bild2_bu.description" resname="action_bild2_bu.description" >
+				<source>Actionbild 2 Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="action_bild2_alt.description" resname="action_bild2_alt.description" >
+				<source>Actionbild 2 AltText</source>
+			</trans-unit>
+			<trans-unit id="action_bild2_title.description" resname="action_bild2_title.description" >
+				<source>Actionbild 2 TitleText</source>
+			</trans-unit>
+			<trans-unit id="action_bild3.description" resname="action_bild3.description" >
+				<source>Actionbild 3</source>
+			</trans-unit>
+			<trans-unit id="action_bild3_bu.description" resname="action_bild3_bu.description" >
+				<source>Actionbild 3 Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="action_bild3_alt.description" resname="action_bild3_alt.description" >
+				<source>Actionbild 3 AltText</source>
+			</trans-unit>
+			<trans-unit id="action_bild3_title.description" resname="action_bild3_title.description" >
+				<source>Actionbild 3 TitleText</source>
+			</trans-unit>
+			<trans-unit id="galerie.description" resname="galerie.description" >
+				<source>Link zu Galerie</source>
+			</trans-unit>
+			<trans-unit id="pdf.description" resname="pdf.description" >
+				<source>PDF-Datei</source>
+			</trans-unit>
+			<trans-unit id="linkextern.description" resname="linkextern.description" >
+				<source>Externer Link</source>
+			</trans-unit>
+			<trans-unit id="walls.description" resname="walls.description" >
+				<source>Wand</source>
+			</trans-unit>
+			<trans-unit id="guide.description" resname="guide.description" >
+				<source>Führer</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

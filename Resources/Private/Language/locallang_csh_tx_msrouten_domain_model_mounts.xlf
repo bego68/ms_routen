@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:10:31Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="mount_name.description" resname="mount_name.description" >
+				<source>Name des Berges</source>
+			</trans-unit>
+			<trans-unit id="mount_description.description" resname="mount_description.description" >
+				<source>Beschreibung des Berges</source>
+			</trans-unit>
+			<trans-unit id="height.description" resname="height.description" >
+				<source>Höhe</source>
+			</trans-unit>
+			<trans-unit id="mount_location_n.description" resname="mount_location_n.description" >
+				<source>Location N</source>
+			</trans-unit>
+			<trans-unit id="mount_location_o.description" resname="mount_location_o.description" >
+				<source>Location O</source>
+			</trans-unit>
+			<trans-unit id="mount_way_to_top.description" resname="mount_way_to_top.description" >
+				<source>Normalweg zum Gipfel</source>
+			</trans-unit>
+			<trans-unit id="mount_way_to_bot.description" resname="mount_way_to_bot.description" >
+				<source>Abstieg</source>
+			</trans-unit>
+			<trans-unit id="gebirge.description" resname="gebirge.description" >
+				<source>Gebirge</source>
+			</trans-unit>
+			<trans-unit id="karte.description" resname="karte.description" >
+				<source>Karte</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

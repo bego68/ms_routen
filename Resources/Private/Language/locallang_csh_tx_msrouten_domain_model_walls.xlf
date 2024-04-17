@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:11:24Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="wall_name.description" resname="wall_name.description" >
+				<source>Name der Wand</source>
+			</trans-unit>
+			<trans-unit id="wall_description.description" resname="wall_description.description" >
+				<source>Kurze Beschreibung oder Charakteristik der Wand</source>
+			</trans-unit>
+			<trans-unit id="wall_height.description" resname="wall_height.description" >
+				<source>maximale Wandhöhe</source>
+			</trans-unit>
+			<trans-unit id="wall_pictures.description" resname="wall_pictures.description" >
+				<source>Übersichtsbild der Wand</source>
+			</trans-unit>
+			<trans-unit id="mounts.description" resname="mounts.description" >
+				<source>Berg</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

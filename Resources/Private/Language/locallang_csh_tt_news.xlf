@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:10:13Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="guide_name.description" resname="guide_name.description" >
+				<source>Name führer</source>
+			</trans-unit>
+			<trans-unit id="guide_description.description" resname="guide_description.description" >
+				<source>guideDescription</source>
+			</trans-unit>
+			<trans-unit id="guide_author.description" resname="guide_author.description" >
+				<source>Autor</source>
+			</trans-unit>
+			<trans-unit id="guide_i_s_b_n.description" resname="guide_i_s_b_n.description" >
+				<source>guideISBN</source>
+			</trans-unit>
+			<trans-unit id="guide_price.description" resname="guide_price.description" >
+				<source>guidePrice</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

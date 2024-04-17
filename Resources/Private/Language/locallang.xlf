@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:09:05Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="tx_msrouten_domain_model_routes" resname="tx_msrouten_domain_model_routes" >
+				<source>Alpine Kletterrouten</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.routen_name" resname="tx_msrouten_domain_model_routes.routen_name" >
+				<source>Routenname</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.level_short" resname="tx_msrouten_domain_model_routes.level_short" >
+				<source>Schwierigkeit kurz</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.erstbegeher" resname="tx_msrouten_domain_model_routes.erstbegeher" >
+				<source>Erstbegeher</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.level" resname="tx_msrouten_domain_model_routes.level" >
+				<source>Schwierigkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.elevel" resname="tx_msrouten_domain_model_routes.elevel" >
+				<source>E-Bewertung</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.climbtime" resname="tx_msrouten_domain_model_routes.climbtime" >
+				<source>Kletterzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.climbdistance" resname="tx_msrouten_domain_model_routes.climbdistance" >
+				<source>Kletterlänge</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.exposition" resname="tx_msrouten_domain_model_routes.exposition" >
+				<source>Exposition</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.wandhoehe" resname="tx_msrouten_domain_model_routes.wandhoehe" >
+				<source>Wandhöhe</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.material" resname="tx_msrouten_domain_model_routes.material" >
+				<source>Ausrüstung</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.beauty" resname="tx_msrouten_domain_model_routes.beauty" >
+				<source>Schönheit</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.frequenz" resname="tx_msrouten_domain_model_routes.frequenz" >
+				<source>Frequenz</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.route_description" resname="tx_msrouten_domain_model_routes.route_description" >
+				<source>Charakter</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.level_long" resname="tx_msrouten_domain_model_routes.level_long" >
+				<source>Schwierigkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.absicherung" resname="tx_msrouten_domain_model_routes.absicherung" >
+				<source>Absicherung</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.zustieg" resname="tx_msrouten_domain_model_routes.zustieg" >
+				<source>Zustieg</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.einstieg" resname="tx_msrouten_domain_model_routes.einstieg" >
+				<source>Einstieg</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.huette" resname="tx_msrouten_domain_model_routes.huette" >
+				<source>Stützpunkt</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.hints" resname="tx_msrouten_domain_model_routes.hints" >
+				<source>Hinweise</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.abstieg" resname="tx_msrouten_domain_model_routes.abstieg" >
+				<source>Abstieg</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.verlauf" resname="tx_msrouten_domain_model_routes.verlauf" >
+				<source>Routenverlauf</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.erstbegeher_lang" resname="tx_msrouten_domain_model_routes.erstbegeher_lang" >
+				<source>Erstbegeher</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.quelle" resname="tx_msrouten_domain_model_routes.quelle" >
+				<source>Informationsquelle</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.topo" resname="tx_msrouten_domain_model_routes.topo" >
+				<source>Topo</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.topo_bu" resname="tx_msrouten_domain_model_routes.topo_bu" >
+				<source>Topo Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.topo_alt" resname="tx_msrouten_domain_model_routes.topo_alt" >
+				<source>Topo AltText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.topo_title" resname="tx_msrouten_domain_model_routes.topo_title" >
+				<source>Topo TitleText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.wandbild" resname="tx_msrouten_domain_model_routes.wandbild" >
+				<source>Wandbild</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.wandbild_bu" resname="tx_msrouten_domain_model_routes.wandbild_bu" >
+				<source>Wandbild Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.wandbild_alt" resname="tx_msrouten_domain_model_routes.wandbild_alt" >
+				<source>Wandbild AltText </source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.wandbild_title" resname="tx_msrouten_domain_model_routes.wandbild_title" >
+				<source>Wandbild TitleText </source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild1" resname="tx_msrouten_domain_model_routes.action_bild1" >
+				<source>Actionbild 1</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild1_bu" resname="tx_msrouten_domain_model_routes.action_bild1_bu" >
+				<source>Actionbild1 Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild1_alt" resname="tx_msrouten_domain_model_routes.action_bild1_alt" >
+				<source>Actionbild 1 AltText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.actionbild1_title" resname="tx_msrouten_domain_model_routes.actionbild1_title" >
+				<source>Actionbild 1 TitleText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild2" resname="tx_msrouten_domain_model_routes.action_bild2" >
+				<source>Actionbild 2 </source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild2_bu" resname="tx_msrouten_domain_model_routes.action_bild2_bu" >
+				<source>Actionbild 2 Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild2_alt" resname="tx_msrouten_domain_model_routes.action_bild2_alt" >
+				<source>Actionbild 2 AltText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild2_title" resname="tx_msrouten_domain_model_routes.action_bild2_title" >
+				<source>Actionbild 2 TitleText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild3" resname="tx_msrouten_domain_model_routes.action_bild3" >
+				<source>Actionbild 3</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild3_bu" resname="tx_msrouten_domain_model_routes.action_bild3_bu" >
+				<source>Actionbild 3 Bildunterschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild3_alt" resname="tx_msrouten_domain_model_routes.action_bild3_alt" >
+				<source>Actionbild 3 AltText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.action_bild3_title" resname="tx_msrouten_domain_model_routes.action_bild3_title" >
+				<source>Actionbild 3 TitleText</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.galerie" resname="tx_msrouten_domain_model_routes.galerie" >
+				<source>Link zu Galerie</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.pdf" resname="tx_msrouten_domain_model_routes.pdf" >
+				<source>PDF-Datei</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.linkextern" resname="tx_msrouten_domain_model_routes.linkextern" >
+				<source>Externer Link</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.walls" resname="tx_msrouten_domain_model_routes.walls" >
+				<source>walls</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.guide" resname="tx_msrouten_domain_model_routes.guide" >
+				<source>Führer</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort10" resname="tx_msrouten_domain_model_routes.levelshort10" >
+				<source>1</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort11" resname="tx_msrouten_domain_model_routes.levelshort11" >
+				<source>1+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort19" resname="tx_msrouten_domain_model_routes.levelshort19" >
+				<source>2-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort20" resname="tx_msrouten_domain_model_routes.levelshort20" >
+				<source>2</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort21" resname="tx_msrouten_domain_model_routes.levelshort21" >
+				<source>2+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort29" resname="tx_msrouten_domain_model_routes.levelshort29" >
+				<source>3-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort30" resname="tx_msrouten_domain_model_routes.levelshort30" >
+				<source>3</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort31" resname="tx_msrouten_domain_model_routes.levelshort31" >
+				<source>3+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort39" resname="tx_msrouten_domain_model_routes.levelshort39" >
+				<source>4-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort40" resname="tx_msrouten_domain_model_routes.levelshort40" >
+				<source>4</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort41" resname="tx_msrouten_domain_model_routes.levelshort41" >
+				<source>4+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort49" resname="tx_msrouten_domain_model_routes.levelshort49" >
+				<source>5-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort50" resname="tx_msrouten_domain_model_routes.levelshort50" >
+				<source>5</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort51" resname="tx_msrouten_domain_model_routes.levelshort51" >
+				<source>5+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort59" resname="tx_msrouten_domain_model_routes.levelshort59" >
+				<source>6-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort60" resname="tx_msrouten_domain_model_routes.levelshort60" >
+				<source>6</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort61" resname="tx_msrouten_domain_model_routes.levelshort61" >
+				<source>6+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort69" resname="tx_msrouten_domain_model_routes.levelshort69" >
+				<source>7-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort70" resname="tx_msrouten_domain_model_routes.levelshort70" >
+				<source>7</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort71" resname="tx_msrouten_domain_model_routes.levelshort71" >
+				<source>7+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort79" resname="tx_msrouten_domain_model_routes.levelshort79" >
+				<source>8-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort80" resname="tx_msrouten_domain_model_routes.levelshort80" >
+				<source>8</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort81" resname="tx_msrouten_domain_model_routes.levelshort81" >
+				<source>8+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort89" resname="tx_msrouten_domain_model_routes.levelshort89" >
+				<source>9-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort90" resname="tx_msrouten_domain_model_routes.levelshort90" >
+				<source>9</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort91" resname="tx_msrouten_domain_model_routes.levelshort91" >
+				<source>9+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort99" resname="tx_msrouten_domain_model_routes.levelshort99" >
+				<source>10-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort100" resname="tx_msrouten_domain_model_routes.levelshort100" >
+				<source>10</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort101" resname="tx_msrouten_domain_model_routes.levelshort101" >
+				<source>10+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort109" resname="tx_msrouten_domain_model_routes.levelshort109" >
+				<source>11-</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort110" resname="tx_msrouten_domain_model_routes.levelshort110" >
+				<source>11</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_routes.levelshort111" resname="tx_msrouten_domain_model_routes.levelshort111" >
+				<source>11+</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts" resname="tx_msrouten_domain_model_mounts" >
+				<source>Mounts</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.mount_name" resname="tx_msrouten_domain_model_mounts.mount_name" >
+				<source>Name des Berges</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.mount_description" resname="tx_msrouten_domain_model_mounts.mount_description" >
+				<source>Beschreibung des Berges</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.height" resname="tx_msrouten_domain_model_mounts.height" >
+				<source>Höhe</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.mount_location_n" resname="tx_msrouten_domain_model_mounts.mount_location_n" >
+				<source>Location N</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.mount_location_o" resname="tx_msrouten_domain_model_mounts.mount_location_o" >
+				<source>Location O</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.mount_way_to_top" resname="tx_msrouten_domain_model_mounts.mount_way_to_top" >
+				<source>Normalweg zum Gipfel</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.mount_way_to_bot" resname="tx_msrouten_domain_model_mounts.mount_way_to_bot" >
+				<source>Abstieg</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.gebirge" resname="tx_msrouten_domain_model_mounts.gebirge" >
+				<source>Gebirge</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_mounts.karte" resname="tx_msrouten_domain_model_mounts.karte" >
+				<source>Karte</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_walls" resname="tx_msrouten_domain_model_walls" >
+				<source>Walls</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_walls.wall_name" resname="tx_msrouten_domain_model_walls.wall_name" >
+				<source>Name der Wand</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_walls.wall_description" resname="tx_msrouten_domain_model_walls.wall_description" >
+				<source>Wand Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_walls.wall_height" resname="tx_msrouten_domain_model_walls.wall_height" >
+				<source>Wandhöhet</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_walls.wall_pictures" resname="tx_msrouten_domain_model_walls.wall_pictures" >
+				<source>Wandbild</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_walls.mounts" resname="tx_msrouten_domain_model_walls.mounts" >
+				<source>mounts</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_pictures" resname="tx_msrouten_domain_model_pictures" >
+				<source>Pictures</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_pictures.picture_wall" resname="tx_msrouten_domain_model_pictures.picture_wall" >
+				<source>Bild der Wand</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_pictures.wall_pic_bu" resname="tx_msrouten_domain_model_pictures.wall_pic_bu" >
+				<source>Bildunterschrift Wandbild</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_pictures.wall_pic_alt" resname="tx_msrouten_domain_model_pictures.wall_pic_alt" >
+				<source>Alt-Text Wandbild</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_pictures.wall_pic_title" resname="tx_msrouten_domain_model_pictures.wall_pic_title" >
+				<source>TitleText Wandbild</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_guide" resname="tx_msrouten_domain_model_guide" >
+				<source>Guide</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_guide.guide_name" resname="tx_msrouten_domain_model_guide.guide_name" >
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_guide.guide_description" resname="tx_msrouten_domain_model_guide.guide_description" >
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_guide.guide_author" resname="tx_msrouten_domain_model_guide.guide_author" >
+				<source>Autor</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_guide.guide_i_s_b_n" resname="tx_msrouten_domain_model_guide.guide_i_s_b_n" >
+				<source>guideISBN</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_guide.guide_price" resname="tx_msrouten_domain_model_guide.guide_price" >
+				<source>guidePrice</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten" resname="tx_msrouten_domain_model_karten" >
+				<source>Karten</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.karten_name" resname="tx_msrouten_domain_model_karten.karten_name" >
+				<source>Karten Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.nummer" resname="tx_msrouten_domain_model_karten.nummer" >
+				<source>VerlagsNummer</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.massstab" resname="tx_msrouten_domain_model_karten.massstab" >
+				<source>Maßstab</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.land" resname="tx_msrouten_domain_model_karten.land" >
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.isbn13" resname="tx_msrouten_domain_model_karten.isbn13" >
+				<source>ISBN-13 Nummer</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.asin" resname="tx_msrouten_domain_model_karten.asin" >
+				<source>Amazon-ASIN, bzw. ISBN 10</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.stand" resname="tx_msrouten_domain_model_karten.stand" >
+				<source>Bearbeitungsstand</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.zone" resname="tx_msrouten_domain_model_karten.zone" >
+				<source>UTM-Zone</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.li_unten_utm_rechts" resname="tx_msrouten_domain_model_karten.li_unten_utm_rechts" >
+				<source>Eckkoordinaten links unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.uli_unten_utm_hoch" resname="tx_msrouten_domain_model_karten.uli_unten_utm_hoch" >
+				<source>Eckkoordinaten links unten, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.li_oben_utm_rechts" resname="tx_msrouten_domain_model_karten.li_oben_utm_rechts" >
+				<source>Eckkoordinaten links oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.li_oben_utm_hoch" resname="tx_msrouten_domain_model_karten.li_oben_utm_hoch" >
+				<source>Eckkoordinaten links oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_oben_utm_rechts" resname="tx_msrouten_domain_model_karten.re_oben_utm_rechts" >
+				<source>Eckkoordinaten rechts oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_oben_utm_hoch" resname="tx_msrouten_domain_model_karten.re_oben_utm_hoch" >
+				<source>Eckkoordinaten rechts oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_unten_utm_rechts" resname="tx_msrouten_domain_model_karten.re_unten_utm_rechts" >
+				<source>Eckkoordinaten rechts unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_unten_utm_hoch" resname="tx_msrouten_domain_model_karten.re_unten_utm_hoch" >
+				<source>Eckkoordinaten rechts unten, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.zone2" resname="tx_msrouten_domain_model_karten.zone2" >
+				<source>Rückseite Zone</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.li_unten_utm_rechts2" resname="tx_msrouten_domain_model_karten.li_unten_utm_rechts2" >
+				<source>Rückseite Eckkoordinaten links unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.li_unten_utm_hoch2" resname="tx_msrouten_domain_model_karten.li_unten_utm_hoch2" >
+				<source>Rückseite Eckkoordinaten links unten, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.li_oben_utm_rechts2" resname="tx_msrouten_domain_model_karten.li_oben_utm_rechts2" >
+				<source>Rückseite Eckkoordinaten links oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.li_oben_utm_hoch2" resname="tx_msrouten_domain_model_karten.li_oben_utm_hoch2" >
+				<source>Rückseite Eckkoordinaten links oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_oben_utm_rechts2" resname="tx_msrouten_domain_model_karten.re_oben_utm_rechts2" >
+				<source>Rückseite Eckkoordinaten rechts oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_oben_utm_hoch2" resname="tx_msrouten_domain_model_karten.re_oben_utm_hoch2" >
+				<source>Rückseite Eckkoordinaten rechts oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_unten_utm_rechts2" resname="tx_msrouten_domain_model_karten.re_unten_utm_rechts2" >
+				<source>Rückseite Eckkoordinaten rechts unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_karten.re_unten_utm_hoch2" resname="tx_msrouten_domain_model_karten.re_unten_utm_hoch2" >
+				<source>Rückseite Eckkoordinaten rechts unten, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_gebirge" resname="tx_msrouten_domain_model_gebirge" >
+				<source>Gebirge</source>
+			</trans-unit>
+			<trans-unit id="tx_msrouten_domain_model_gebirge.gebirge" resname="tx_msrouten_domain_model_gebirge.gebirge" >
+				<source>Gebirgsgruppe</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
