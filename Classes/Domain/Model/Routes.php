@@ -24,9 +24,12 @@ namespace Bertigolf\Msrouten\Domain\Model;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Annotation\Validate;
+use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use \TYPO3\CMS\Extbase\Domain\Model\FileReference;
 /**
  *
  *
@@ -35,8 +38,52 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
  *
  */
  define("MSROUTEN_EINZELANSICHT_PFAD",     "alpinklettern_details.html?&tx_news_pi1%5Btx_news%5D=");
+
 class Routes extends AbstractEntity {
 
+	
+	
+    /**
+     * Wandbilder 2024
+     *
+     * @var ObjectStorage<FileReference>
+     * @Cascade("remove")
+     */
+    protected ?ObjectStorage $wandbilder2024 = null;
+	
+	 /**
+     * topo 2024
+     *
+     * @var ObjectStorage<FileReference>
+     * @Cascade("remove")
+     */
+    protected ?ObjectStorage $topo2024 = null;
+	
+	 /**
+     * actionbilder 2024
+     *
+     * @var ObjectStorage<FileReference>
+     * @Cascade("remove")
+     */
+    protected ?ObjectStorage $actionbilder2024 = null;
+	
+	 /**
+     * galerie 2024
+     *
+     * @var ObjectStorage<FileReference>
+     * @Cascade("remove")
+     */
+    protected ?ObjectStorage $galerie2024 = null;
+	
+	 /**
+     * pdf 2024
+     *
+     * @var ObjectStorage<FileReference>
+     * @Cascade("remove")
+     */
+    protected ?ObjectStorage $pdf2024 = null;
+	
+	
 	/**
 	 * Routenname
 	 *
@@ -383,6 +430,60 @@ class Routes extends AbstractEntity {
 	 * @Lazy
 	 */
 	protected $guide;
+	
+	
+	
+	/**
+     * Returns the wandbilder2024
+     *
+     * @return ObjectStorage<FileReference> $wandbilder2024
+     */
+    public function getWandbilder2024():?ObjectStorage
+    {
+        return $this->wandbilder2024;
+    }
+	
+	/**
+     * Returns the topo2024
+     *
+     * @return ObjectStorage<FileReference> $topo2024
+     */
+    public function getTopo2024():?ObjectStorage
+    {
+        return $this->topo2024;
+    }
+	
+	/**
+     * Returns the pdf2024
+     *
+     * @return ObjectStorage<FileReference> $pdf2024
+     */
+    public function getPdf2024():?ObjectStorage
+    {
+        return $this->pdf2024;
+    }
+	
+	/**
+     * Returns the galerie2024
+     *
+     * @return ObjectStorage<FileReference> $galerie2024
+     */
+    public function getGalerie2024():?ObjectStorage
+    {
+        return $this->galerie2024;
+    }
+	
+	/**
+     * Returns the actionbilder2024
+     *
+     * @return ObjectStorage<FileReference> $actionbilder2024
+     */
+    public function getActionbilder2024():?ObjectStorage
+    {
+        return $this->actionbilder2024;
+    }
+
+	
 
 	/**
 	 * Returns the routeDescription
@@ -1342,5 +1443,7 @@ class Routes extends AbstractEntity {
 		
 		$this->linkextern = $linkextern;
 	}
+	
+	
 
 }

@@ -22,7 +22,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'routen_name,level_short,erstbegeher,level,elevel,climbtime,climbdistance,exposition,wandhoehe,material,beauty,frequenz,route_description,level_long,absicherung,zustieg,einstieg,huette,hints,abstieg,verlauf,erstbegeher_lang,quelle,topo,topo_bu,topo_alt,topo_title,wandbilder_2024,wandbild,wandbild_bu,wandbild_alt,wandbild_title,action_bild1,action_bild1_bu,action_bild1_alt,actionbild1_title,action_bild2,action_bild2_bu,action_bild2_alt,action_bild2_title,action_bild3,action_bild3_bu,action_bild3_alt,action_bild3_title,galerie,pdf,linkextern,walls,guide,sorting_markus',
+		'searchFields' => 'routen_name,level_short,erstbegeher,level,elevel,climbtime,climbdistance,exposition,wandhoehe,material,beauty,frequenz,route_description,level_long,absicherung,zustieg,einstieg,huette,hints,abstieg,verlauf,erstbegeher_lang,quelle,topo,topo_bu,topo_alt,topo_title,wandbilder2024,wandbild,wandbild_bu,wandbild_alt,wandbild_title,action_bild1,action_bild1_bu,action_bild1_alt,actionbild1_title,action_bild2,action_bild2_bu,action_bild2_alt,action_bild2_title,action_bild3,action_bild3_bu,action_bild3_alt,action_bild3_title,galerie,pdf,linkextern,walls,guide,sorting_markus',
 //		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('msrouten') . 'Resources/Public/Icons/tx_msrouten_domain_model_routes.gif'
 	),
 );
@@ -31,7 +31,9 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_msrouten_domain_model_routes']['ctrl'],
 	'interface' => array(),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, routen_name, slug, level_long, level_short, level, elevel, alevel, climbtime, climbdistance, wandhoehe, exposition, material, beauty, frequenz, route_description;;;richtext:rte_transform[mode=ts_links], absicherung;;;richtext:rte_transform[mode=ts_links], zustieg;;;richtext:rte_transform[mode=ts_links], einstieg;;;richtext:rte_transform[mode=ts_links], verlauf;;;richtext:rte_transform[mode=ts_links], abstieg;;;richtext:rte_transform[mode=ts_links], huette;;;richtext:rte_transform[mode=ts_css], hints;;;richtext:rte_transform[mode=ts_links], erstbegeher_lang;;;richtext:rte_transform[mode=ts_links], erstbegeher, quelle;;;richtext:rte_transform[mode=ts_links], topo_2024, topo, topo_bu;;;richtext:rte_transform[mode=ts_links], topo_alt, topo_title,wandbilder_2024, wandbild, wandbild_bu;;;richtext:rte_transform[mode=ts_links], wandbild_alt, wandbild_title, actionbilder_2024, action_bild1, action_bild1_bu;;;richtext:rte_transform[mode=ts_links], action_bild1_alt, actionbild1_title, action_bild2, action_bild2_bu;;;richtext:rte_transform[mode=ts_links], action_bild2_alt, action_bild2_title, action_bild3, action_bild3_bu;;;richtext:rte_transform[mode=ts_links], action_bild3_alt, action_bild3_title, galerie_2024, galerie, pdf_2024, pdf, sorting_markus, linkextern;;;richtext:rte_transform[mode=ts_links], walls, guide,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, routen_name, slug, level_long, level_short, level, elevel, alevel, climbtime, climbdistance, wandhoehe, exposition, material, beauty, frequenz, route_description;;;richtext:rte_transform[mode=ts_links], absicherung;;;richtext:rte_transform[mode=ts_links], zustieg;;;richtext:rte_transform[mode=ts_links], einstieg;;;richtext:rte_transform[mode=ts_links], verlauf;;;richtext:rte_transform[mode=ts_links], abstieg;;;richtext:rte_transform[mode=ts_links], huette;;;richtext:rte_transform[mode=ts_css], hints;;;richtext:rte_transform[mode=ts_links], erstbegeher_lang;;;richtext:rte_transform[mode=ts_links], erstbegeher, quelle;;;richtext:rte_transform[mode=ts_links], topo_
+		2024, topo, topo_bu;;;richtext:rte_transform[mode=ts_links], topo_alt, topo_title,wandbilder_2
+		024, wandbild, wandbild_bu;;;richtext:rte_transform[mode=ts_links], wandbild_alt, wandbild_title, actionbilder2024, action_bild1, action_bild1_bu;;;richtext:rte_transform[mode=ts_links], action_bild1_alt, actionbild1_title, action_bild2, action_bild2_bu;;;richtext:rte_transform[mode=ts_links], action_bild2_alt, action_bild2_title, action_bild3, action_bild3_bu;;;richtext:rte_transform[mode=ts_links], action_bild3_alt, action_bild3_title, galerie2024, galerie, pdf2024, pdf, sorting_markus, linkextern;;;richtext:rte_transform[mode=ts_links], walls, guide,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -384,7 +386,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 				'eval' => 'trim'
 			),
 		),
-		 'topo_2024' => [
+		 'topo2024' => [
 			'label' => 'topo_2024',
 			'config' => [
 				'type' => 'file',
@@ -433,7 +435,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 				'eval' => 'trim'
 			),
 		),
-		 'wandbilder_2024' => [
+		 'wandbilder2024' => [
 			'label' => 'wandbilder_2024',
 			'config' => [
 				'type' => 'file',
@@ -564,7 +566,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 				'eval' => 'trim'
 			),
 		),
-		 'actionbilder_2024' => [
+		 'actionbilder2024' => [
 			'label' => 'actionbilder_2024',
 			'config' => [
 				'type' => 'file',
@@ -581,7 +583,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 				'eval' => 'trim'
 			),
 		),
-		 'galerie_2024' => [
+		 'galerie2024' => [
 			'label' => 'Galerie_2024',
 			'config' => [
 				'type' => 'file',
@@ -599,7 +601,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 				'eval' => 'trim'
 			),
 		),
-		 'pdf_2024' => [
+		 'pdf2024' => [
 			'label' => 'PDF_2024',
 			'config' => [
 				'type' => 'file',
