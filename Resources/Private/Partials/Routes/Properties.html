@@ -23,8 +23,9 @@
 		 <h4> <f:link.page pageUid="{routes.walls.mounts.mountWayToBot}">Kletterrouten {routes.walls.mounts.gebirge.gebirge}</f:link.page>  »
 	<f:link.page pageUid="{routes.walls.mounts.mountWayToTop}">{routes.walls.mounts.mountName}</f:link.page> » {routes.walls.wallName}
 		 </h4>
-	   </div>	
-	 <div class="section section-default" style="float:left; width: 90%">
+	   </div>
+	<div>
+	 <div class="section section-head">
 	   <div class="container">
 		 <h1>{routes.routenName}<span class="stern stern{routes.beauty}"></span></h1>
 	   </div>
@@ -99,41 +100,59 @@
 
 							 <f:render section="guide" arguments="{newsItem:routes.guide}"/>
 					
-						   </f:if> 
+	</f:if> 
+  </div>	
+<!--=================Wandbild ================================ -->
 	
-	<div class="container">    
-		
-		
-		
-		
+	<div class="container wandbild">    
+	  <div class="gallery-row route-properties">
 		<div class="mediaelement mediaelement-image">
-		  <figure class="image">
-			  <f:for each="{routes.wandbilder2024}" as="wandbild" iteration="iterator">
-				    <picture>
-						<f:image 
+			 <f:for each="{routes.wandbilder2024}" as="wandbild" iteration="iterator">
+				<div class="gallery-item gallery-item-size-1">  
+		          <figure class="image">	
+					  <bk2k:link.lightbox
+									image="{wandbild}"
+									maxHeight="{settings.lightbox.image.maxHeight}"
+									maxWidth="{settings.lightbox.image.maxWidth}"
+									class="lightbox"
+									rel="klettern-001"
+									lightbox-title="{wandbild.originalResource.properties.title}"
+									lightbox-caption="{wandbild.originalResource.properties.description}"
+									lightbox-alt="{wandbild.originalResource.properties.alt}"																						
+					  >    
+				       <picture>
+						 <f:image 
 								  image="{wandbild.originalResource}"
 								  alt="{wandbild.originalResource.properties.description.alt}"  
 								  title="{wandbild.originalResource.properties.description.title}"
 								  width="1199"
 							 />
-						<div >{wandbild.originalResource.properties.description}</div>
-					</picture>
-				  </f:for>
+						 <div >{wandbild.originalResource.properties.description}</div>
+					   </picture>
+				    </bk2k:link.lightbox>
+				  </figure>
+			    </div>	
+			 </f:for>
 			  
 			<!-- Wandbild alte Version-->   
 			<f:if condition="{routes.wandbild}">
-				 <picture>
-					<f:image 
-							  src="uploads/tx_msrouten/{routes.wandbild}" 
-							  alt="{routes.wandbildAlt}"  
-							  title="{routes.wandbildTitle}"
-							  width="1199"
-						 />
-					 <f:format.html>{routes.wandbildBu}</f:format.html>
-				</picture>	 
+			   <div class="gallery-item gallery-item-size-1">  	
+					<figure>	
+						 <picture>
+							<f:image 
+									  src="uploads/tx_msrouten/{routes.wandbild}" 
+									  alt="{routes.wandbildAlt}"  
+									  title="{routes.wandbildTitle}"
+									  width="1199"
+								 />
+							 <f:format.html>{routes.wandbildBu}</f:format.html>
+						</picture>	 
+					 </figure>
+				</div>
 			</f:if>	
-		  </figure>
+		 
 		</div>
+	  </div>	  
 	</div>
 
 	<div class="container">
@@ -247,21 +266,34 @@
 		</div>  
 	</div>
 	
-	<!-- TOPO ---------------------------------- -->
+	<!-- =========================== TOPO ================================= -->
 	<div class="container">
+	  <div class="gallery-row route-properties">
 	    <h1>Topo</h1>	
 		<f:for each="{routes.topo2024}" as="topo" iteration="iterator">
-			 <div class="mediaelement mediaelement-image">
-		 		 <figure class="image topo">
-					<picture>
-						<f:image 
-								 image="{topo.originalResource}"
-								 alt="{topo.originalResource.properties.description.alt}"  
-								 title="{topo.originalResource.properties.description.title}"
-								 width="1199"
-								 />
-						<div >{topo.originalResource.properties.description}</div>
-					</picture>
+			 <div class="gallery-item gallery-item-size-1">  
+		          <figure class="image topo">	
+					  <bk2k:link.lightbox
+									image="{topo}"
+									maxHeight="{settings.lightbox.image.maxHeight}"
+									maxWidth="{settings.lightbox.image.maxWidth}"
+									class="lightbox"
+									rel="klettern-001"
+									lightbox-title="{topo.originalResource.properties.title}"
+									lightbox-caption="{topo.originalResource.properties.description}"
+									lightbox-alt="{topo.originalResource.properties.alt}"																						
+					  >    
+		 	
+							<picture>
+								<f:image 
+										 image="{topo.originalResource}"
+										 alt="{topo.originalResource.properties.description.alt}"  
+										 title="{topo.originalResource.properties.description.title}"
+										 width="1199"
+										 />
+								<div >{topo.originalResource.properties.description}</div>
+							</picture>
+						</bk2k:link.lightbox>  
 				 </figure>
 			 </div>	
 		</f:for>
@@ -269,7 +301,7 @@
 		<!-- Topo alte Version -->
 		 <f:if condition="{routes.topo}">
 		   <f:then>
-			 <div class="mediaelement mediaelement-image">
+			 <div class="gallery-item gallery-item-size-1">  
 		 		 <figure class="image topo">
 				   <picture>
 			       	 <f:image 
@@ -278,12 +310,13 @@
                                   title="{routes.topoTitle}"
                                   width="1199"
                          />
-					 </picture>
+					 </picture>	 
 				 </figure>
 			 </div>	
 		  </f:then>           
 		</f:if>
 		<f:format.html>{routes.topoBu}</f:format.html>
+	  </div>
 	</div>
 	
 	<!-- 		=====================   actionbilder der Route  ===================== 		 -->
@@ -300,15 +333,16 @@
 								maxHeight="{settings.lightbox.image.maxHeight}"
 								maxWidth="{settings.lightbox.image.maxWidth}"
 								class="lightbox"
-								rel="test-001"
-								title="{actionbild.properties.title}"
-								caption="{actionbild.properties.description}"
+								rel="klettern-001"
+								lightbox-title="{actionbild.originalResource.properties.title}"
+								lightbox-caption="{actionbild.originalResource.properties.description}"
+								lightbox-alt="{actionbild.originalResource.properties.alt}"	
 						 > 
 							<picture>
 								<f:image 
 									 image="{actionbild.originalResource}"
-									 alt="{actionbild.originalResource.properties.description.alt}"  
-									 title="{actionbild.originalResource.properties.description.title}"
+									 alt="{actionbild.originalResource.properties.alt}"  
+									 title="{actionbild.originalResource.properties.title}"
 									 width="1199"
 								/>
 							</picture>	
@@ -382,18 +416,22 @@
 <!-- 		=====================   section - guide   ===================== 		 -->	
 	
 	<f:section name="guide">
-      <div class="news-img-wrap">
+      <div class="container guide">
           <geo:link newsItem="{newsItem}" settings="{settings}">
               <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
                 <f:if condition="{mediaElement}">
 					<f:if condition="{mediaElement.type} == 0">
-					  <f:image
-						image="{mediaElement}"
-						title="{mediaElement.title}"
-						alt="{mediaElement.alt}"
-						maxWidth="120"
-						maxHeight="150"
-						/> 
+						 <figure class="image">  
+							<picture>
+							  <f:image
+								image="{mediaElement}"
+								title="{mediaElement.title}"
+								alt="{mediaElement.alt}"
+								maxWidth="120"
+								maxHeight="150"
+								/> 
+							 </picture>
+						</figure>	 
 					</f:if>
                 
                 </f:if>
