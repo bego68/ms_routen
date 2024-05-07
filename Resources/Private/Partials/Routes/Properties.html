@@ -36,7 +36,7 @@
 					  <tr>
 						<th>Bewertung </th>
 						<th>Ernsthaftigkeit
-						  <f:image src="fileadmin/images/Info.png" width="20px" height="20px" alt="Infos" 
+						  <f:image class="help-icon" src="fileadmin/images/Info.png" width="20px" height="20px" alt="Infos" 
 						   title="Gesamtanforderungen
 	E1 - sehr gut abgesicherte Route, zusätzliche Absicherung nicht erforderlich
 	E2 - großteils gut abgesicherte Route, stellenweise eigene Absicherung erforderlich 
@@ -88,7 +88,7 @@
 						<th>Beliebtheit</th>
 						
 					  <tr>
-						<td class="frequenz frequenz{routes.frequenz}"><span> </span></td>
+						<td class="frequenz frequenz{routes.frequenz}"><span></span><span class="frequenz pdf">{routes.frequenz}</span></td>
 					  </tr>
 					</table>
 					
@@ -102,7 +102,7 @@
 					
 	</f:if> 
   </div>	
-<!--=================Wandbild ================================ -->
+<!--=================Wandbild WEB================================ -->
 	
 	<div class="container wandbild">    
 	  <div class="gallery-row route-properties">
@@ -154,8 +154,8 @@
 		</div>
 	  </div>	  
 	</div>
-
-	<div class="container">
+<!-- ==================== Route Properties ============================-->
+	<div class="container route-properties">
 	   <div class="section-row route-properties">
 		  <f:if condition="{routes.routeDescription}">
 			 <div class="section-column section-column-half">
@@ -194,7 +194,7 @@
 	</div>
 <!-- 		=====================   Werbebanner - Anfang   ===================== 		 -->
 
-	<div class="container">    
+	<div class="container werbebanner">    
 		<div class="mediaelement mediaelement-image">
 		  <figure class="image">
 				<f:link.external uri="https://ortovox.com/de-de/far-and-light?utm_source=markusstadler&utm_medium=banner&utm_campaign=awareness-farlight-summer23" 
@@ -213,7 +213,7 @@
 		<!--	
 		=====================   Werbebanner - Ende  ===================== 
 		-->
-	<div class="container">
+	<div class="container route-properties">
 	   <div class="section-row route-properties">
 			  <f:if condition="{routes.zustieg}">
 				  <div class="section-column section-column-half">
@@ -267,7 +267,7 @@
 	</div>
 	
 	<!-- =========================== TOPO ================================= -->
-	<div class="container">
+	<div class="container topo">
 	  <div class="gallery-row route-properties">
 	    <h1>Topo</h1>	
 		<f:for each="{routes.topo2024}" as="topo" iteration="iterator">
@@ -320,7 +320,7 @@
 	</div>
 	
 	<!-- 		=====================   actionbilder der Route  ===================== 		 -->
-	<div class="container">
+	<div class="container actionbild">
 	   <h1>Fotos aus der Route</h1>
 	   <div class="gallery-row route-properties">
 		   
@@ -353,7 +353,7 @@
 			  </div>
 		</f:for> 
 		   
-		   <!-- Topo alte Version -->
+		   <!-- actionbilder alte Version -->
 		 <f:if condition="{routes.actionBild1}">
 			 
 			 <div class="section-column section-column-half">
@@ -411,6 +411,60 @@
 	
 	  </div>
 	</div>
+	
+	<!--=================Wandbild PDF================================ -->
+	
+	<div class="container wandbild pdf">    
+	  <div class="gallery-row route-properties">
+		<div class="mediaelement mediaelement-image">
+			 <f:for each="{routes.wandbilder2024}" as="wandbild" iteration="iterator">
+				<div class="gallery-item gallery-item-size-1">  
+		          <figure class="image">	
+					  <bk2k:link.lightbox
+									image="{wandbild}"
+									maxHeight="{settings.lightbox.image.maxHeight}"
+									maxWidth="{settings.lightbox.image.maxWidth}"
+									class="lightbox"
+									rel="klettern-001"
+									lightbox-title="{wandbild.originalResource.properties.title}"
+									lightbox-caption="{wandbild.originalResource.properties.description}"
+									lightbox-alt="{wandbild.originalResource.properties.alt}"																						
+					  >    
+				       <picture>
+						 <f:image 
+								  image="{wandbild.originalResource}"
+								  alt="{wandbild.originalResource.properties.description.alt}"  
+								  title="{wandbild.originalResource.properties.description.title}"
+								  width="1199"
+							 />
+						 <div >{wandbild.originalResource.properties.description}</div>
+					   </picture>
+				    </bk2k:link.lightbox>
+				  </figure>
+			    </div>	
+			 </f:for>
+			  
+			<!-- Wandbild alte Version-->   
+			<f:if condition="{routes.wandbild}">
+			   <div class="gallery-item gallery-item-size-1">  	
+					<figure>	
+						 <picture>
+							<f:image 
+									  src="uploads/tx_msrouten/{routes.wandbild}" 
+									  alt="{routes.wandbildAlt}"  
+									  title="{routes.wandbildTitle}"
+									  width="1199"
+								 />
+							 <f:format.html>{routes.wandbildBu}</f:format.html>
+						</picture>	 
+					 </figure>
+				</div>
+			</f:if>	
+		 
+		</div>
+	  </div>	  
+	</div>
+	
 	
 	
 <!-- 		=====================   section - guide   ===================== 		 -->	
