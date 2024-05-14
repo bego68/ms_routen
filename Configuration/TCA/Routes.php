@@ -219,7 +219,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'route_description' => array(
 			'exclude' => 0,
-			'label' => 'Routenname',
+			'label' => 'Routencharakter',
 			'config' => [
 				'type' => 'text',
 				'cols' => 40,

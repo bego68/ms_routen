@@ -36,7 +36,11 @@
 					  <tr>
 						<th>Bewertung </th>
 						<th>Ernsthaftigkeit
-						  <f:image class="help-icon" src="fileadmin/images/Info.png" width="20px" height="20px" alt="Infos" 
+						  </th>
+					  </tr>
+					  <tr>
+						<td><f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}" /> {routes.alevel}</td>
+						<td>{routes.elevel} &nbsp; <f:image class="help-icon" src="fileadmin/images/Info.png" width="16px" height="16x" alt="Infos" 
 						   title="Gesamtanforderungen
 	E1 - sehr gut abgesicherte Route, zusätzliche Absicherung nicht erforderlich
 	E2 - großteils gut abgesicherte Route, stellenweise eigene Absicherung erforderlich 
@@ -49,12 +53,7 @@
 	E5 - schlecht abgesicherte, ernste Route, wenig oder sehr schlechtes Hakenmaterial, 
 		mobile Absicherung schwierig oder nicht überall möglich
 	E6 - sehr ernste Route, auch in den schwierigen und/oder brüchigen Seillängen 
-	   nicht immer absicherbar"  />
-						  </th>
-					  </tr>
-					  <tr>
-						<td><f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}" /> {routes.alevel}</td>
-						<td>{routes.elevel}</td>
+	   nicht immer absicherbar"  /></td>
 					  </tr>
 					</table>
                 </div>
@@ -192,27 +191,7 @@
 			  </f:if>
 		</div>
 	</div>
-<!-- 		=====================   Werbebanner - Anfang   ===================== 		 -->
 
-	<div class="container werbebanner">    
-		<div class="mediaelement mediaelement-image">
-		  <figure class="image">
-				<f:link.external uri="https://ortovox.com/de-de/far-and-light?utm_source=markusstadler&utm_medium=banner&utm_campaign=awareness-farlight-summer23" 
-							  target="_blank" rel="nofollow">
-				  <picture>
-					 <f:image 
-						  src="fileadmin/images/allgemeines/bannerOrtovox/230315_Online_Banner_Statisch_1200x148_LRZ_Far_Light_M.jpg" 
-						  alt="Ortovox - Far & Light Collection"  
-						  title="Ortovox - Far & Light Collection"
-					 />
-					</picture>
-				</f:link.external>
-			</figure>
-		</div>
-	</div>
-		<!--	
-		=====================   Werbebanner - Ende  ===================== 
-		-->
 	<div class="container route-properties">
 	   <div class="section-row route-properties">
 			  <f:if condition="{routes.zustieg}">
@@ -265,7 +244,7 @@
 			</f:if>
 		</div>  
 	</div>
-	
+	<pagebreak> 
 	<!-- =========================== TOPO ================================= -->
 	<div class="container topo">
 	  <div class="gallery-row route-properties">
