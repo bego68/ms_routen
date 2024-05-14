@@ -1,14 +1,13 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
+if (!defined ('TYPO3')) {
 	die ('Access denied.');
 }
 $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes',
+		'title'	=> 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes',
 		'label' => 'routen_name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
-		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
 		'sortby' =>'sorting',
 		'versioningWS' => 2,
@@ -23,18 +22,17 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'routen_name,level_short,erstbegeher,level,elevel,climbtime,climbdistance,exposition,wandhoehe,material,beauty,frequenz,route_description,level_long,absicherung,zustieg,einstieg,huette,hints,abstieg,verlauf,erstbegeher_lang,quelle,topo,topo_bu,topo_alt,topo_title,wandbild,wandbild_bu,wandbild_alt,wandbild_title,action_bild1,action_bild1_bu,action_bild1_alt,actionbild1_title,action_bild2,action_bild2_bu,action_bild2_alt,action_bild2_title,action_bild3,action_bild3_bu,action_bild3_alt,action_bild3_title,galerie,pdf,linkextern,walls,guide,sorting_markus',
+		'searchFields' => 'routen_name,level_short,erstbegeher,level,elevel,climbtime,climbdistance,exposition,wandhoehe,material,beauty,frequenz,route_description,level_long,absicherung,zustieg,einstieg,huette,hints,abstieg,verlauf,erstbegeher_lang,quelle,topo,topo_bu,topo_alt,topo_title,wandbilder2024,wandbild,wandbild_bu,wandbild_alt,wandbild_title,action_bild1,action_bild1_bu,action_bild1_alt,actionbild1_title,action_bild2,action_bild2_bu,action_bild2_alt,action_bild2_title,action_bild3,action_bild3_bu,action_bild3_alt,action_bild3_title,galerie,pdf,linkextern,walls,guide,sorting_markus',
 //		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('msrouten') . 'Resources/Public/Icons/tx_msrouten_domain_model_routes.gif'
 	),
 );
 
 $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_msrouten_domain_model_routes']['ctrl'],
-	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, routen_name,slug, level_long, level_short, level, elevel, alevel, climbtime, climbdistance, wandhoehe, exposition, material, beauty, frequenz, route_description, absicherung, zustieg, einstieg, verlauf, abstieg, huette, hints, erstbegeher_lang, erstbegeher, quelle, topo, topo_bu, topo_alt, topo_title, wandbild, wandbild_bu, wandbild_alt, wandbild_title, action_bild1, action_bild1_bu, action_bild1_alt, actionbild1_title, action_bild2, action_bild2_bu, action_bild2_alt, action_bild2_title, action_bild3, action_bild3_bu, action_bild3_alt, action_bild3_title, galerie, pdf, linkextern, walls, guide, slug, sorting_markus',
-	),
+	'interface' => array(),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, routen_name, slug, level_long, level_short, level, elevel, alevel, climbtime, climbdistance, wandhoehe, exposition, material, beauty, frequenz, route_description;;;richtext:rte_transform[mode=ts_links], absicherung;;;richtext:rte_transform[mode=ts_links], zustieg;;;richtext:rte_transform[mode=ts_links], einstieg;;;richtext:rte_transform[mode=ts_links], verlauf;;;richtext:rte_transform[mode=ts_links], abstieg;;;richtext:rte_transform[mode=ts_links], huette;;;richtext:rte_transform[mode=ts_css], hints;;;richtext:rte_transform[mode=ts_links], erstbegeher_lang;;;richtext:rte_transform[mode=ts_links], erstbegeher, quelle;;;richtext:rte_transform[mode=ts_links], topo, topo_bu;;;richtext:rte_transform[mode=ts_links], topo_alt, topo_title, wandbild, wandbild_bu;;;richtext:rte_transform[mode=ts_links], wandbild_alt, wandbild_title, action_bild1, action_bild1_bu;;;richtext:rte_transform[mode=ts_links], action_bild1_alt, actionbild1_title, action_bild2, action_bild2_bu;;;richtext:rte_transform[mode=ts_links], action_bild2_alt, action_bild2_title, action_bild3, action_bild3_bu;;;richtext:rte_transform[mode=ts_links], action_bild3_alt, action_bild3_title, galerie, pdf, sorting_markus, linkextern;;;richtext:rte_transform[mode=ts_links], walls, guide,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, routen_name, slug, level_long, level_short, level, elevel, alevel, climbtime, climbdistance, wandhoehe, exposition, material, beauty, frequenz, route_description;;;richtext:rte_transform[mode=ts_links], absicherung;;;richtext:rte_transform[mode=ts_links], zustieg;;;richtext:rte_transform[mode=ts_links], einstieg;;;richtext:rte_transform[mode=ts_links], verlauf;;;richtext:rte_transform[mode=ts_links], abstieg;;;richtext:rte_transform[mode=ts_links], huette;;;richtext:rte_transform[mode=ts_css], hints;;;richtext:rte_transform[mode=ts_links], erstbegeher_lang;;;richtext:rte_transform[mode=ts_links], erstbegeher, quelle;;;richtext:rte_transform[mode=ts_links], topo2024, topo, topo_bu;;;richtext:rte_transform[mode=ts_links], topo_alt, topo_title,wandbilder2
+		024, wandbild, wandbild_bu;;;richtext:rte_transform[mode=ts_links], wandbilder2024,wandbild_alt, wandbild_title, actionbilder2024, action_bild1, action_bild1_bu;;;richtext:rte_transform[mode=ts_links], action_bild1_alt, actionbild1_title, action_bild2, action_bild2_bu;;;richtext:rte_transform[mode=ts_links], action_bild2_alt, action_bild2_title, action_bild3, action_bild3_bu;;;richtext:rte_transform[mode=ts_links], action_bild3_alt, action_bild3_title, galerie2024, galerie, pdf2024, pdf, sorting_markus, linkextern;;;richtext:rte_transform[mode=ts_links], walls, guide,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -43,29 +41,11 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		'sys_language_uid' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
-			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'sys_language',
-				'foreign_table_where' => 'ORDER BY sys_language.title',
-				'items' => array(
-					array('LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0)
-				),
-			),
+			'config' => [
+                'type' => 'language',
+            ],
 		),
-		'l10n_parent' => array(
-			'displayCond' => 'FIELD:sys_language_uid:>:0',
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
-			'config' => array(
-				'type' => 'select',
-				'items' => array(
-					array('', 0),
-				),
-				'foreign_table' => 'tx_msrouten_domain_model_routes',
-				'foreign_table_where' => 'AND tx_msrouten_domain_model_routes.pid=###CURRENT_PID### AND tx_msrouten_domain_model_routes.sys_language_uid IN (-1,0)',
-			),
-		),
+
 		'l10n_diffsource' => array(
 			'config' => array(
 				'type' => 'passthrough',
@@ -79,57 +59,61 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 				'max' => 255,
 			)
 		),
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-			'config' => array(
-				'type' => 'check',
-			),
-		),
+		'hidden' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+           'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'default' => 0,
+                'items' => [
+                    ['label' => '', 'value' => '']
+                ],
+            ],
+        ],
 		'starttime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
-			'config' => array(
-				'type' => 'input',
+			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+			'config' => [
+				'type' => 'datetime',
+         		'format' => 'date',
 				'size' => 13,
-				'max' => 20,
-				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
-				'range' => array(
+				'range' => [
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-			),
+				],
+			],
 		),
 		'endtime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
-			'config' => array(
-				'type' => 'input',
+			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+			'config' => [
+				'type' => 'datetime',
+         		'format' => 'date',
 				'size' => 13,
-				'max' => 20,
-				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
-				'range' => array(
+				'range' => [
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-			),
+				],
+			],
 		),
 		'routen_name' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.routen_name',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.routen_name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'trim,required'
+				'eval' => 'trim',
+				'required' => 'true'
 			),
 		),
 		'level_short' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.level_short',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.level_short',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -138,7 +122,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'erstbegeher' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.erstbegeher',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.erstbegeher',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -147,7 +131,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'level' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.level',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.level',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -156,7 +140,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'elevel' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.elevel',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.elevel',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -165,7 +149,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'alevel' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.alevel',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.alevel',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -174,7 +158,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'climbtime' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.climbtime',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.climbtime',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -183,7 +167,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'climbdistance' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.climbdistance',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.climbdistance',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -192,7 +176,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'exposition' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.exposition',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.exposition',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -201,7 +185,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'wandhoehe' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.wandhoehe',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.wandhoehe',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -210,7 +194,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'material' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.material',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.material',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -219,47 +203,34 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'beauty' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.beauty',
-			'config' => array(
-				'type' => 'input',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.beauty',
+			'config' => [
+				'type' => 'number',
 				'size' => 4,
-				'eval' => 'int'
-			),
+			],
 		),
 		'frequenz' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.frequenz',
-			'config' => array(
-				'type' => 'input',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.frequenz',
+			'config' => [
+				'type' => 'number',
 				'size' => 4,
-				'eval' => 'int'
-			),
+			],
 		),
 		'route_description' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.route_description',
-			'config' => array(
+			'label' => 'Routencharakter',
+			'config' => [
 				'type' => 'text',
 				'cols' => 40,
 				'rows' => 15,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-						              'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
-			),
-			'defaultExtras' => 'richtext[]',
+				'enableRichtext' => true,
+			],
 		),
 		'level_long' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.level_long',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.level_long',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -269,204 +240,113 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'absicherung' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.absicherung',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.absicherung',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-						            'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'zustieg' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.zustieg',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.zustieg',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(           
-					                  'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'einstieg' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.einstieg',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.einstieg',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
 				'rows' => 15,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(           
-							'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'huette' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.huette',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.huette',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-            				'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',		),
 		'hints' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.hints',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.hints',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-          					  'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'abstieg' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.abstieg',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.abstieg',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-          					  'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'verlauf' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.verlauf',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.verlauf',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-          					  'name' => 'wizard_rte' ),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
-			'defaultExtras' => 'richtext[]',
 		),
 		'erstbegeher_lang' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.erstbegeher_lang',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.erstbegeher_lang',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-          					  'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'quelle' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.quelle',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.quelle',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-          					  'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'topo' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.topo',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.topo',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -475,49 +355,47 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'topo_bu' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.topo_bu',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.topo_bu',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-            				'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'topo_alt' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.topo_alt',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.topo_alt',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
 		'topo_title' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.topo_title',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.topo_title',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
+		 'topo2024' => [
+			'label' => 'topo_2024',
+			'config' => [
+				'type' => 'file',
+				'maxitems' => 6,
+				'allowed' => 'common-image-types'
+			],
+		],
 		'wandbild' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.wandbild',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.wandbild',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -526,49 +404,47 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'wandbild_bu' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.wandbild_bu',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.wandbild_bu',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-            				'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'wandbild_alt' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.wandbild_alt',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.wandbild_alt',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
 		'wandbild_title' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.wandbild_title',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.wandbild_title',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
+		 'wandbilder2024' => [
+			'label' => 'wandbilder_2024',
+			'config' => [
+				'type' => 'file',
+				'maxitems' => 6,
+				'allowed' => 'common-image-types'
+			],
+		],
 		'action_bild1' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild1',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild1',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -577,49 +453,39 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'action_bild1_bu' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild1_bu',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild1_bu',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-            				'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'action_bild1_alt' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild1_alt',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild1_alt',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
 		'actionbild1_title' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.actionbild1_title',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.actionbild1_title',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
 		'action_bild2' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild2',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild2',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -628,49 +494,39 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'action_bild2_bu' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild2_bu',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild2_bu',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-            				'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+					'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'action_bild2_alt' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild2_alt',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild2_alt',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
 		'action_bild2_title' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild2_title',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild2_title',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
 		'action_bild3' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild3',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild3',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -679,91 +535,97 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'action_bild3_bu' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild3_bu',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild3_bu',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-            				'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'action_bild3_alt' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild3_alt',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild3_alt',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 3,
 				'eval' => 'trim'
 			),
 		),
 		'action_bild3_title' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.action_bild3_title',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.action_bild3_title',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 1,
 				'eval' => 'trim'
 			),
 		),
+		 'actionbilder2024' => [
+			'label' => 'actionbilder_2024',
+			'config' => [
+				'type' => 'file',
+				'maxitems' => 6,
+				'allowed' => 'common-image-types'
+			],
+		],
 		'galerie' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.galerie',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.galerie',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
 		),
+		 'galerie2024' => [
+			'label' => 'Galerie_2024',
+			'config' => [
+				'type' => 'file',
+				'maxitems' => 6,
+				'allowed' => 'common-image-types'
+			],
+		],
+		
 		'pdf' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.pdf',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.pdf',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
 		),
+		 'pdf2024' => [
+			'label' => 'PDF_2024',
+			'config' => [
+				'type' => 'file',
+				'maxitems' => 6,
+				'allowed' => 'pdf'
+			],
+		],
 		'linkextern' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.linkextern',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.linkextern',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 1,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'module' => array(
-            				'name' => 'wizard_rte'),
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
+				'enableRichtext' => true,
 			),
 			'defaultExtras' => 'richtext[]',
 		),
 		'walls' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.walls',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.walls',
 			'config' => array(
 				'type' => 'select',
+				 'renderType' => 'selectSingle',
 				'foreign_table' => 'tx_msrouten_domain_model_walls',
 				'foreign_table_where' => 'AND tx_msrouten_domain_model_walls.pid=###CURRENT_PID###',
 				'minitems' => 0,
@@ -779,9 +641,10 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'guide' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.guide',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.guide',
 			'config' => array(
 				'type' => 'select',
+				 'renderType' => 'selectSingle',
 				'foreign_table' => 'tx_news_domain_model_news',
 				'foreign_table_where' => 'AND tx_news_domain_model_news.PID=1619',
 				'minitems' => 0,
@@ -797,7 +660,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 		),
 		'sorting_markus'  => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xml:tx_msrouten_domain_model_routes.sorting_markus',
+			'label' => 'LLL:EXT:msrouten/Resources/Private/Language/locallang_db.xlf:tx_msrouten_domain_model_routes.sorting_markus',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 6,
@@ -805,28 +668,27 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_routes'] = array(
 			),
 		),
 		'slug' => [
-    'label' => 'slug',
-    'exclude' => 1,
-    'config' => [
-        'type' => 'slug',
-        'generatorOptions' => [
-            'fields' => ['routen_name'],
-            'fieldSeparator' => '/',
-            'prefixParentPageSlug' => true,
-            'replacements' => [
-                '/' => '',
-                ', ' => '',
-                '(' => '',
-                ')' => '',
-                '"' => '',
-                '.' => ''
-                
-            ],
-        ],
-        'fallbackCharacter' => '-',
-        'eval' => 'uniqueInSite',
-    ],
-],
-	),
+			'label' => 'slug',
+			'exclude' => 1,
+			'config' => [
+				'type' => 'slug',
+				'generatorOptions' => [
+					'fields' => ['routen_name'],
+					'fieldSeparator' => '/',
+					'prefixParentPageSlug' => true,
+					'replacements' => [
+						'/' => '',
+						', ' => '',
+						'(' => '',
+						')' => '',
+						'"' => '',
+						'.' => ''
 
+					],
+				],
+				'fallbackCharacter' => '-',
+				'eval' => 'uniqueInSite',
+			],
+		],
+	),
 );

@@ -26,6 +26,7 @@ namespace Bertigolf\Msrouten\Controller;
 use Bertigolf\Msrouten\Domain\Model\Routes;
 use Bertigolf\Msrouten\Domain\Repository\RoutesRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  *
@@ -48,7 +49,7 @@ class RoutesController extends ActionController {
 	 *
 	 * @return void
 	 */
-	public function listAction() {
+	public function listAction():ResponseInterface {
 		$gebirge= (int) $this->settings['flexform']['gebirge'];
 		$mount= (int) $this->settings['flexform']['mount'];
 		$wall=   (int)$this->settings['flexform']['walls'];
@@ -59,6 +60,7 @@ class RoutesController extends ActionController {
 		$routes =   $this->routesRepository->findAllOrt( $gebirge, $mount, $wall, $route_sort_field );
 		$this->view->assign('routess', $routes);
 		$this->view->assign('singlePID', $singlePID);
+		return $this->htmlResponse();
 	}
 	
 	/**
@@ -66,7 +68,7 @@ class RoutesController extends ActionController {
 	 *
 	 * @return void
 	 */
-	public function listGebirgeAction() {
+	public function listGebirgeAction():ResponseInterface {
 		
 		$gebirge= (int) $this->settings['flexform']['gebirge'];
 		$mount= (int) $this->settings['flexform']['mount'];
@@ -85,6 +87,7 @@ class RoutesController extends ActionController {
 		$this->view->assign('singlePID', $singlePID);
 		$this->view->assign('mounts', $berge);
 		$this->view->assign('routess', $routes);
+		return $this->htmlResponse();
 	}
 	
 	
@@ -97,9 +100,10 @@ class RoutesController extends ActionController {
 	 *
 	 * @return void
 	 */
-	public function showAction( Routes $routes, bool $pdf=FALSE) {	
+	public function showAction( Routes $routes, bool $pdf=FALSE):ResponseInterface {	
 		$this->view->assign('routes', $routes);
 		$this->view->assign('pdf', $pdf);
+		return $this->htmlResponse();
 	}
 
 	/**
@@ -109,8 +113,9 @@ class RoutesController extends ActionController {
 	 * 
 	 * @return void
 	 */
-	public function newAction(Routes $newRoutes = NULL) {
+	public function newAction(Routes $newRoutes = NULL):ResponseInterface {
 		$this->view->assign('newRoutes', $newRoutes);
+		return $this->htmlResponse();
 	}
 
 	/**
@@ -119,10 +124,11 @@ class RoutesController extends ActionController {
 	 * @param Routes $newRoutes
 	 * @return void
 	 */
-	public function createAction(Routes $newRoutes) {
+	public function createAction(Routes $newRoutes):ResponseInterface {
 		$this->routesRepository->add($newRoutes);
 		$this->flashMessageContainer->add('Your new Routes was created.');
 		$this->redirect('list');
+		return $this->htmlResponse();
 	}
 
 	/**
@@ -131,8 +137,9 @@ class RoutesController extends ActionController {
 	 * @param Routes $routes
 	 * @return void
 	 */
-	public function editAction(Routes $routes) {
+	public function editAction(Routes $routes):ResponseInterface {
 		$this->view->assign('routes', $routes);
+		return $this->htmlResponse();
 	}
 
 	/**

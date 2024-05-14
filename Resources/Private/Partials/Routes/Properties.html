@@ -2,10 +2,10 @@
 
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 	
-	        
-          <n:titleTag>
+	        <n:titleTag>
               <f:format.htmlentitiesDecode>Kletterroute {routes.walls.mounts.gebirge.gebirge}:{routes.walls.mounts.mountName}-{routes.routenName}</f:format.htmlentitiesDecode>
             </n:titleTag>
 	<!--
@@ -16,16 +16,31 @@
 	<f:image src="fileadmin/images/pdfDownload.png" width="50px" height="50px" alt="PDF Download" title="Als PDF-Datei herunterladen"/>
 	</div>
 -->
-	<h3> <f:link.page pageUid="{routes.walls.mounts.mountWayToBot}">Kletterrouten {routes.walls.mounts.gebirge.gebirge}</f:link.page>  »
-	<f:link.page pageUid="{routes.walls.mounts.mountWayToTop}">{routes.walls.mounts.mountName}</f:link.page> » {routes.walls.wallName}</h3>
-	<h1>{routes.routenName}<span class="stern stern{routes.beauty}"></span></h1>
-    <div id="msBoxen" class="skitouren">
-          <div id="msBoxenItem" class="">
-            <table> 
-              <tr>
-                <th>Bewertung </th>
-                <th>Ernsthaftigkeit
-				  <f:image src="fileadmin/images/Info.png" width="20px" height="20px" alt="Infos" 
+
+	
+	
+	   <div class="container">
+		 <h4> <f:link.page pageUid="{routes.walls.mounts.mountWayToBot}">Kletterrouten {routes.walls.mounts.gebirge.gebirge}</f:link.page>  »
+	<f:link.page pageUid="{routes.walls.mounts.mountWayToTop}">{routes.walls.mounts.mountName}</f:link.page> » {routes.walls.wallName}
+		 </h4>
+	   </div>
+	<div>
+	 <div class="section section-head">
+	   <div class="container">
+		 <h1>{routes.routenName}<span class="stern stern{routes.beauty}"></span></h1>
+	   </div>
+       <div class="container">
+            <div class="section-row">
+                <div class="section-column section-column-fourth">
+					<table> 
+					  <tr>
+						<th>Bewertung </th>
+						<th>Ernsthaftigkeit
+						  </th>
+					  </tr>
+					  <tr>
+						<td><f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}" /> {routes.alevel}</td>
+						<td>{routes.elevel} &nbsp; <f:image class="help-icon" src="fileadmin/images/Info.png" width="16px" height="16x" alt="Infos" 
 						   title="Gesamtanforderungen
 	E1 - sehr gut abgesicherte Route, zusätzliche Absicherung nicht erforderlich
 	E2 - großteils gut abgesicherte Route, stellenweise eigene Absicherung erforderlich 
@@ -38,241 +53,420 @@
 	E5 - schlecht abgesicherte, ernste Route, wenig oder sehr schlechtes Hakenmaterial, 
 		mobile Absicherung schwierig oder nicht überall möglich
 	E6 - sehr ernste Route, auch in den schwierigen und/oder brüchigen Seillängen 
-	   nicht immer absicherbar"  />
-				  </th>
-              </tr>
-              <tr>
-                <td><f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}" /> {routes.alevel}</td>
-                <td>{routes.elevel}</td>
-              </tr>
-            </table>
-           </div>
-            <div id="msBoxenItem" class="">
-            <table > 
-              <tr>
-                <th>Kletterzeit</th>
-                <th>Kletterlänge</th>
-              </tr>
-              <tr>
-                <td>{routes.climbtime}</td>
-                <td>{routes.climbdistance}</td>
-              </tr>
-            </table>
-           </div>
-            <div id="msBoxenItem" class="">
-            <table > 
-              <tr>
-                <th>Wandhöhe</th>
-                <th>Exposition</th>
-              </tr>
-              <tr>
-                <td>{routes.wandhoehe}</td>
-                <td>{routes.exposition}</td>
-              </tr>
-            </table>
-           </div>
-            <div id="msBoxenItem" class="">
-            <table> 
-              <tr>
-                <th>Beliebtheit</th>
-			       <f:if condition="{routes.guide}">
-			      
-                      <th rowspan="2"><f:render section="guide" arguments="{newsItem:routes.guide}"/></th>
-			       </f:if>
-              <tr>
-                <td class="frequenz frequenz{routes.frequenz}"><span> </span></td>
-              </tr>
-            </table>
-           </div>
-     </div>
-<div id="msBoxen" class="">
-	<f:if condition="{routes.wandbild}">
-	     <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture wandbild">  
-			<f:image 
-			          src="uploads/tx_msrouten/{routes.wandbild}" 
-			          alt="{routes.wandbildAlt}"  
-			          title="{routes.wandbildTitle}"
-			          width="1199"
-		         />
-			 <f:format.html>{routes.wandbildBu}</f:format.html>
-		 </div>
-		 
-	</f:if>	
-          <f:if condition="{routes.routeDescription}">
-			  <div id="msBoxenItem" class="standard TeaserLarge">
-				  <h4>Routencharakter</h4>
-                  <f:format.html>{routes.routeDescription}</f:format.html>
-              </div>
-		  </f:if>
-		  <f:if condition="{routes.levelLong}">
-            <div id="msBoxenItem" class="standard TeaserLarge">
-               <h4>Schwierigkeit</h4>
-               <f:format.html>{routes.levelLong}</f:format.html>
-            </div>			 
-		  </f:if>
-	
-          <f:if condition="{routes.absicherung}">
-			<div id="msBoxenItem" class="standard TeaserLarge">
-               <h4>Absicherung</h4>
-               <f:format.html>{routes.absicherung}</f:format.html>
+	   nicht immer absicherbar"  /></td>
+					  </tr>
+					</table>
+                </div>
+                <div class="section-column section-column-fourth">
+                 <table > 
+					  <tr>
+						<th>Kletterzeit</th>
+						<th>Kletterlänge</th>
+					  </tr>
+					  <tr>
+						<td>{routes.climbtime}</td>
+						<td>{routes.climbdistance}</td>
+					  </tr>
+					</table>
+                </div>
+                <div class="section-column section-column-fourth"> 
+                  <table > 
+					  <tr>
+						<th>Wandhöhe</th>
+						<th>Exposition</th>
+					  </tr>
+					  <tr>
+						<td>{routes.wandhoehe}</td>
+						<td>{routes.exposition}</td>
+					  </tr>
+					</table>
+                </div>
+                 <div class="section-column section-column-fourth">
+                     <table> 
+					  <tr>
+						<th>Beliebtheit</th>
+						
+					  <tr>
+						<td class="frequenz frequenz{routes.frequenz}"><span></span><span class="frequenz pdf">{routes.frequenz}</span></td>
+					  </tr>
+					</table>
+					
+                </div>
             </div>
-		  </f:if>
-	      
-	      <f:if condition="{routes.material}">
-			<div id="msBoxenItem" class="standard TeaserLarge">
-				  <h4>Empfohlene Ausrüstung</h4>
-                  <f:format.html>{routes.material}</f:format.html>
-            </div>
-		  </f:if>
+        </div>
+    </div>
+	 <f:if condition="{routes.guide}">
 
-	      <f:if condition="{routes.erstbegeherLang}">
-			<div id="msBoxenItem" class="standard TeaserXLarge">
-				  <h4>Erstbegeher</h4>
-                  <f:format.html>{routes.erstbegeherLang}</f:format.html>
-            </div>
-		  </f:if>
-	<!--
-    =====================   Werbebanner - Anfang   ===================== 
-     -->
-		  <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture wandbild">  
-		    <f:link.external uri="https://ortovox.com/de-de/far-and-light?utm_source=markusstadler&utm_medium=banner&utm_campaign=awareness-farlight-summer23" 
-						  target="_blank" rel="nofollow">
-			     <f:image 
-			          src="fileadmin/images/allgemeines/bannerOrtovox/230315_Online_Banner_Statisch_1200x148_LRZ_Far_Light_M.jpg" 
-			          alt="Ortovox - Far & Light Collection"  
-			          title="Ortovox - Far & Light Collection"
-		         />
-		    </f:link.external>
-		 </div>
-	<!--	
-    =====================   Werbebanner - Ende  ===================== 
-    -->
-	      <f:if condition="{routes.zustieg}">
-			<div id="msBoxenItem" class="standard TeaserXLarge">
-				  <h4>Zustieg</h4>
-                  <f:format.html>{routes.zustieg}</f:format.html>
-            </div>
-		  </f:if>
-	      <f:if condition="{routes.einstieg}">
-			<div id="msBoxenItem" class="standard TeaserXLarge">
-				  <h4>Einstieg</h4>
-                  <f:format.html>{routes.einstieg}</f:format.html>
-            </div>
-		  </f:if>
-	      <f:if condition="{routes.verlauf}">
-			<div id="msBoxenItem" class="standard TeaserXLarge">
-				  <h4>Routenverlauf</h4>
-                  <f:format.html>{routes.verlauf}</f:format.html>
-            </div>
-		  </f:if>
-	      <f:if condition="{routes.abstieg}">
-			<div id="msBoxenItem" class="standard TeaserXLarge">
-				  <h4>Abstieg</h4>
-                  <f:format.html>{routes.abstieg}</f:format.html>
-            </div>
-		  </f:if>
-	      <f:if condition="{routes.huette}">
-			<div id="msBoxenItem" class="standard TeaserXLarge">
-				  <h4>Übernachtung oder Einkehr</h4>
-                  <f:format.html>{routes.huette}</f:format.html>
-            </div>
-		  </f:if>
-	      <f:if condition="{routes.hints}">
-			<div id="msBoxenItem" class="standard TeaserXLarge">
-				  <h4>Hinweise</h4>
-                  <f:format.html>{routes.hints}</f:format.html>
-            </div>
-		  </f:if>
-	      <f:if condition="{routes.quelle}">
-			<div id="msBoxenItem" class="standard TeaserLarge">
-				  <h4>Informationsquelle</h4>
-                  <f:format.html>{routes.quelle}</f:format.html>
-            </div>
-		  </f:if>
-		       <f:if condition="{routes.linkextern}">
-			 <div id="msBoxenItem" class="standard TeaserLarge">
-				  <h4>Externer Link</h4>
-                  <f:format.html>{routes.linkextern}</f:format.html>
-            </div>
-				   </f:if>
-		  
-</div>
-<div id="msBoxen" class="">
-	     <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture wandbild"> 
-            <table> 
-              <tr>
-				  <th><H1>Topo</H1></th>
-              </tr>
-              <tr><td align="center">	
+							 <f:render section="guide" arguments="{newsItem:routes.guide}"/>
+					
+	</f:if> 
+  </div>	
+<!--=================Wandbild WEB================================ -->
+	
+	<div class="container wandbild">    
+	  <div class="gallery-row route-properties">
+		<div class="mediaelement mediaelement-image">
+			 <f:for each="{routes.wandbilder2024}" as="wandbild" iteration="iterator">
+				<div class="gallery-item gallery-item-size-1">  
+		          <figure class="image">	
+					  <bk2k:link.lightbox
+									image="{wandbild}"
+									maxHeight="{settings.lightbox.image.maxHeight}"
+									maxWidth="{settings.lightbox.image.maxWidth}"
+									class="lightbox"
+									rel="klettern-001"
+									lightbox-title="{wandbild.originalResource.properties.title}"
+									lightbox-caption="{wandbild.originalResource.properties.description}"
+									lightbox-alt="{wandbild.originalResource.properties.alt}"																						
+					  >    
+				       <picture>
+						 <f:image 
+								  image="{wandbild.originalResource}"
+								  alt="{wandbild.originalResource.properties.description.alt}"  
+								  title="{wandbild.originalResource.properties.description.title}"
+								  width="1199"
+							 />
+						 <div >{wandbild.originalResource.properties.description}</div>
+					   </picture>
+				    </bk2k:link.lightbox>
+				  </figure>
+			    </div>	
+			 </f:for>
+			  
+			<!-- Wandbild alte Version-->   
+			<f:if condition="{routes.wandbild}">
+			   <div class="gallery-item gallery-item-size-1">  	
+					<figure>	
+						 <picture>
+							<f:image 
+									  src="uploads/tx_msrouten/{routes.wandbild}" 
+									  alt="{routes.wandbildAlt}"  
+									  title="{routes.wandbildTitle}"
+									  width="1199"
+								 />
+							 <f:format.html>{routes.wandbildBu}</f:format.html>
+						</picture>	 
+					 </figure>
+				</div>
+			</f:if>	
+		 
+		</div>
+	  </div>	  
+	</div>
+<!-- ==================== Route Properties ============================-->
+	<div class="container route-properties">
+	   <div class="section-row route-properties">
+		  <f:if condition="{routes.routeDescription}">
+			 <div class="section-column section-column-half">
+				<h4>Routencharakter</h4>
+				<f:format.html>{routes.routeDescription}</f:format.html>
+			  </div>  
+			</f:if>
+			  <f:if condition="{routes.levelLong}">
+				<div class="section-column section-column-half">
+				   <h4>Schwierigkeit</h4>
+				   <f:format.html>{routes.levelLong}</f:format.html>
+				</div>			 
+			  </f:if>
+
+			  <f:if condition="{routes.absicherung}">
+				 <div class="section-column section-column-half">
+				   <h4>Absicherung</h4>
+				   <f:format.html>{routes.absicherung}</f:format.html>
+				</div>
+			  </f:if>
+
+			  <f:if condition="{routes.material}">
+				 <div class="section-column section-column-half">
+					  <h4>Empfohlene Ausrüstung</h4>
+					  <f:format.html>{routes.material}</f:format.html>
+				</div>
+			  </f:if>
+
+			  <f:if condition="{routes.erstbegeherLang}">
+				  <div class="section-column section-column-half">
+					  <h4>Erstbegeher</h4>
+					  <f:format.html>{routes.erstbegeherLang}</f:format.html>
+				</div>
+			  </f:if>
+		</div>
+	</div>
+
+	<div class="container route-properties">
+	   <div class="section-row route-properties">
+			  <f:if condition="{routes.zustieg}">
+				  <div class="section-column section-column-half">
+					  <h4>Zustieg</h4>
+					  <f:format.html>{routes.zustieg}</f:format.html>
+				</div>
+			  </f:if>
+			  <f:if condition="{routes.einstieg}">
+				  <div class="section-column section-column-half">
+					  <h4>Einstieg</h4>
+					  <f:format.html>{routes.einstieg}</f:format.html>
+				</div>
+			  </f:if>
+			  <f:if condition="{routes.verlauf}">
+				  <div class="section-column section-column-half">
+					  <h4>Routenverlauf</h4>
+					  <f:format.html>{routes.verlauf}</f:format.html>
+				</div>
+			  </f:if>
+			  <f:if condition="{routes.abstieg}">
+				  <div class="section-column section-column-half">
+					  <h4>Abstieg</h4>
+					  <f:format.html>{routes.abstieg}</f:format.html>
+				</div>
+			  </f:if>
+			  <f:if condition="{routes.huette}">
+				  <div class="section-column section-column-half">
+					  <h4>Übernachtung oder Einkehr</h4>
+					  <f:format.html>{routes.huette}</f:format.html>
+				</div>
+			  </f:if>
+			  <f:if condition="{routes.hints}">
+				  <div class="section-column section-column-half">
+					  <h4>Hinweise</h4>
+					  <f:format.html>{routes.hints}</f:format.html>
+				</div>
+			  </f:if>
+			  <f:if condition="{routes.quelle}">
+				  <div class="section-column section-column-half">
+					  <h4>Informationsquelle</h4>
+					  <f:format.html>{routes.quelle}</f:format.html>
+				</div>
+			  </f:if>
+			  <f:if condition="{routes.linkextern}">
+				   <div class="section-column section-column-half">
+					  <h4>Externer Link</h4>
+					  <f:format.html>{routes.linkextern}</f:format.html>
+				</div>
+			</f:if>
+		</div>  
+	</div>
+	<pagebreak> 
+	<!-- =========================== TOPO ================================= -->
+	<div class="container topo">
+	  <div class="gallery-row route-properties">
+	    <h1>Topo</h1>	
+		<f:for each="{routes.topo2024}" as="topo" iteration="iterator">
+			 <div class="gallery-item gallery-item-size-1">  
+		          <figure class="image topo">	
+					  <bk2k:link.lightbox
+									image="{topo}"
+									maxHeight="{settings.lightbox.image.maxHeight}"
+									maxWidth="{settings.lightbox.image.maxWidth}"
+									class="lightbox"
+									rel="klettern-001"
+									lightbox-title="{topo.originalResource.properties.title}"
+									lightbox-caption="{topo.originalResource.properties.description}"
+									lightbox-alt="{topo.originalResource.properties.alt}"																						
+					  >    
+		 	
+							<picture>
+								<f:image 
+										 image="{topo.originalResource}"
+										 alt="{topo.originalResource.properties.description.alt}"  
+										 title="{topo.originalResource.properties.description.title}"
+										 width="1199"
+										 />
+								<div >{topo.originalResource.properties.description}</div>
+							</picture>
+						</bk2k:link.lightbox>  
+				 </figure>
+			 </div>	
+		</f:for>
+		 
+		<!-- Topo alte Version -->
 		 <f:if condition="{routes.topo}">
-		 	<f:then>
-			       	<f:image 
+		   <f:then>
+			 <div class="gallery-item gallery-item-size-1">  
+		 		 <figure class="image topo">
+				   <picture>
+			       	 <f:image 
                                   src="uploads/tx_msrouten/{routes.topo}" 
                                   alt="{routes.topoAlt}"  
                                   title="{routes.topoTitle}"
                                   width="1199"
                          />
-			                <f:format.html>{routes.topoBu}</f:format.html>
-			            </f:then>
-			            <f:else>
-							<f:format.html>{routes.topoBu}</f:format.html>
- 			            </f:else>
-			         </f:if>
-		           </td>
-              </tr>
-            </table>	
-	       </div>
+					 </picture>	 
+				 </figure>
+			 </div>	
+		  </f:then>           
+		</f:if>
+		<f:format.html>{routes.topoBu}</f:format.html>
+	  </div>
+	</div>
 	
-	<f:if condition="{routes.actionBild1}">
-	     <div id="msBoxenItem" class="standard TeaserXLarge responsivepicture aktionbildKlettern"> 
-			 <h2>Fotos aus der Route</h2>
-			<f:image 
-                                  src="uploads/tx_msrouten/{routes.actionBild1}" 
-                                  alt="{routes.actionBild1Alt}"  
-                                  title="{routes.actionBild1Title}"
-                                  width="1199"
-                         />
-			<f:format.html>{routes.actionBild1Bu}</f:format.html>
-			<f:image 
+	<!-- 		=====================   actionbilder der Route  ===================== 		 -->
+	<div class="container actionbild">
+	   <h1>Fotos aus der Route</h1>
+	   <div class="gallery-row route-properties">
+		   
+		  <f:for each="{routes.actionbilder2024}" as="actionbild" iteration="iterator">
+			  <div class="gallery-item gallery-item-size-2"> 
+				 <div class="mediaelement mediaelement-image">
+					 <figure class="image">
+						 <bk2k:link.lightbox
+								image="{actionbild}"
+								maxHeight="{settings.lightbox.image.maxHeight}"
+								maxWidth="{settings.lightbox.image.maxWidth}"
+								class="lightbox"
+								rel="klettern-001"
+								lightbox-title="{actionbild.originalResource.properties.title}"
+								lightbox-caption="{actionbild.originalResource.properties.description}"
+								lightbox-alt="{actionbild.originalResource.properties.alt}"	
+						 > 
+							<picture>
+								<f:image 
+									 image="{actionbild.originalResource}"
+									 alt="{actionbild.originalResource.properties.alt}"  
+									 title="{actionbild.originalResource.properties.title}"
+									 width="1199"
+								/>
+							</picture>	
+							<div >{actionbild.originalResource.properties.description}</div>
+                    	</bk2k:link.lightbox>
+					 </figure>
+				 </div>	
+			  </div>
+		</f:for> 
+		   
+		   <!-- actionbilder alte Version -->
+		 <f:if condition="{routes.actionBild1}">
+			 
+			 <div class="section-column section-column-half">
+	           <div class="mediaelement mediaelement-image">
+				    
+					 <figure class="image">
+					   <picture>
+						  <f:image 
+									  src="uploads/tx_msrouten/{routes.actionBild1}" 
+									  alt="{routes.actionBild1Alt}"  
+									  title="{routes.actionBild1Title}"
+									  width="1199"
+						  />
+						</picture>
+						<f:format.html>{routes.actionBild1Bu}</f:format.html>
+				 	</figure>
+			 	  </div>
+			 </div>
+		 </f:if>	
+		  <f:if condition="{routes.actionBild2}">
+			 <div class="section-column section-column-half">
+	           <div class="mediaelement mediaelement-image">
+				   <figure class="image">  
+					  <picture>
+				        <f:image 
                                   src="uploads/tx_msrouten/{routes.actionBild2}" 
                                   alt="{routes.actionBild2Alt}"  
                                   title="{routes.actionBild2Title}"
                                   width="1199"
                          />
-			<f:format.html>{routes.actionBild2Bu}</f:format.html>
-			<f:image 
+					   </picture>
+			         <f:format.html>{routes.actionBild2Bu}</f:format.html>
+					</figure>
+			 	  </div>
+			 </div>
+		 </f:if>
+		   
+			<f:if condition="{routes.actionBild3}">
+			 <div class="section-column section-column-half">
+	           <div class="mediaelement mediaelement-image">
+				   <figure class="image">  
+					  <picture>
+				        <f:image 
                                   src="uploads/tx_msrouten/{routes.actionBild3}" 
                                   alt="{routes.actionBild3Alt}"  
                                   title="{routes.actionBild3Title}"
                                   width="1199"
                          />
-			<f:format.html>{routes.actionBild3Bu}</f:format.html>			 
-		 </div>
-	</f:if>	
+					   </picture>
+			         <f:format.html>{routes.actionBild3Bu}</f:format.html>
+					</figure>
+			 	  </div>
+			 </div>
+		 </f:if>
+	
 	  </div>
+	</div>
+	
+	<!--=================Wandbild PDF================================ -->
+	
+	<div class="container wandbild pdf">    
+	  <div class="gallery-row route-properties">
+		<div class="mediaelement mediaelement-image">
+			 <f:for each="{routes.wandbilder2024}" as="wandbild" iteration="iterator">
+				<div class="gallery-item gallery-item-size-1">  
+		          <figure class="image">	
+					  <bk2k:link.lightbox
+									image="{wandbild}"
+									maxHeight="{settings.lightbox.image.maxHeight}"
+									maxWidth="{settings.lightbox.image.maxWidth}"
+									class="lightbox"
+									rel="klettern-001"
+									lightbox-title="{wandbild.originalResource.properties.title}"
+									lightbox-caption="{wandbild.originalResource.properties.description}"
+									lightbox-alt="{wandbild.originalResource.properties.alt}"																						
+					  >    
+				       <picture>
+						 <f:image 
+								  image="{wandbild.originalResource}"
+								  alt="{wandbild.originalResource.properties.description.alt}"  
+								  title="{wandbild.originalResource.properties.description.title}"
+								  width="1199"
+							 />
+						 <div >{wandbild.originalResource.properties.description}</div>
+					   </picture>
+				    </bk2k:link.lightbox>
+				  </figure>
+			    </div>	
+			 </f:for>
+			  
+			<!-- Wandbild alte Version-->   
+			<f:if condition="{routes.wandbild}">
+			   <div class="gallery-item gallery-item-size-1">  	
+					<figure>	
+						 <picture>
+							<f:image 
+									  src="uploads/tx_msrouten/{routes.wandbild}" 
+									  alt="{routes.wandbildAlt}"  
+									  title="{routes.wandbildTitle}"
+									  width="1199"
+								 />
+							 <f:format.html>{routes.wandbildBu}</f:format.html>
+						</picture>	 
+					 </figure>
+				</div>
+			</f:if>	
+		 
+		</div>
+	  </div>	  
+	</div>
+	
+	
+	
+<!-- 		=====================   section - guide   ===================== 		 -->	
 	
 	<f:section name="guide">
-      <div class="news-img-wrap">
-        <geo:link newsItem="{newsItem}" settings="{settings}">
+      <div class="container guide">
+          <geo:link newsItem="{newsItem}" settings="{settings}">
               <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
                 <f:if condition="{mediaElement}">
-                <f:if condition="{mediaElement.type} == 0">
-                  <f:image
-                    image="{mediaElement}"
-                    title="{mediaElement.title}"
-                    alt="{mediaElement.alt}"
-                    maxWidth="90"
-                    maxHeight="120"
-                    /> 
-                </f:if>
-                <f:if condition="{mediaElement.type} == 1">
-                  <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}" />
-                </f:if>
-                <f:if condition="{mediaElement.type} == 2">
-                  <f:render partial="Detail/MediaHtml" arguments="{mediaElement: mediaElement}" />
-                </f:if>
-                <f:if condition="{mediaElement.type} == 3">
-                </f:if>
+					<f:if condition="{mediaElement.type} == 0">
+						 <figure class="image">  
+							<picture>
+							  <f:image
+								image="{mediaElement}"
+								title="{mediaElement.title}"
+								alt="{mediaElement.alt}"
+								maxWidth="120"
+								maxHeight="150"
+								/> 
+							 </picture>
+						</figure>	 
+					</f:if>
+                
                 </f:if>
               </f:alias>
         </geo:link>

@@ -1,5 +1,5 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
+if (!defined ('TYPO3')) {
 	die ('Access denied.');
 }
 $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
@@ -8,7 +8,6 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
 		'label' => 'mount_name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
-		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
 
 		'versioningWS' => 2,
@@ -31,9 +30,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
 
 $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_msrouten_domain_model_mounts']['ctrl'],
-	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, mount_name, mount_description, height, mount_location_n, mount_location_o, mount_way_to_top, mount_way_to_bot, gebirge, karte',
-	),
+	'interface' => array(	),
 	'types' => array(
 		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, mount_name, mount_description, height, mount_location_n, mount_location_o, mount_way_to_top, mount_way_to_bot, gebirge, karte,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
@@ -44,28 +41,9 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
 		'sys_language_uid' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
-			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'sys_language',
-				'foreign_table_where' => 'ORDER BY sys_language.title',
-				'items' => array(
-					array('LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0)
-				),
-			),
-		),
-		'l10n_parent' => array(
-			'displayCond' => 'FIELD:sys_language_uid:>:0',
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
-			'config' => array(
-				'type' => 'select',
-				'items' => array(
-					array('', 0),
-				),
-				'foreign_table' => 'tx_msrouten_domain_model_mounts',
-				'foreign_table_where' => 'AND tx_msrouten_domain_model_mounts.pid=###CURRENT_PID### AND tx_msrouten_domain_model_mounts.sys_language_uid IN (-1,0)',
-			),
+			'config' => [
+                'type' => 'language',
+            ],
 		),
 		'l10n_diffsource' => array(
 			'config' => array(
@@ -80,44 +58,47 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
 				'max' => 255,
 			)
 		),
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-			'config' => array(
-				'type' => 'check',
-			),
-		),
+		'hidden' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'default' => 0,
+                 'items' => [
+                    ['label' => '', 'value' => ''],
+                ],
+            ],
+        ],
 		'starttime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
-			'config' => array(
-				'type' => 'input',
+			'config' => [
+				'type' => 'datetime',
+         		'format' => 'date',
 				'size' => 13,
-				'max' => 20,
-				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
-				'range' => array(
+				'range' => [
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-			),
+				],
+			],
 		),
 		'endtime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
-			'config' => array(
-				'type' => 'input',
+			'config' => [
+				'type' => 'datetime',
+         		'format' => 'date',
 				'size' => 13,
-				'max' => 20,
-				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
-				'range' => array(
+				'range' => [
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-			),
+				],
+			],
 		),
 		'mount_name' => array(
 			'exclude' => 0,
@@ -125,7 +106,8 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'trim,required'
+				'eval' => 'trim',
+				'required' => 'true'
 			),
 		),
 		'mount_description' => array(
@@ -198,6 +180,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_mounts'] = array(
 			
 			'config' => array(
 				'type' => 'select',
+				 'renderType' => 'selectSingle',
 				'foreign_table' => 'tx_msrouten_domain_model_gebirge',
 				'foreign_table_where' => 'AND tx_msrouten_domain_model_gebirge.pid=###CURRENT_PID### ',
 				'minitems' => 0,

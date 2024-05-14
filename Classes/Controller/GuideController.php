@@ -1,4 +1,4 @@
-<?php
+<?php  
 namespace Bertigolf\Msrouten\Controller;
 /***************************************************************
  *  Copyright notice
@@ -26,6 +26,7 @@ namespace Bertigolf\Msrouten\Controller;
 use Bertigolf\Msrouten\Domain\Model\Guide;
 use Bertigolf\Msrouten\Domain\Repository\GuideRepository;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use  \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 /**
  *
  *
@@ -33,7 +34,7 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Msrouten_Controller_GuideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class GuideController extends ActionController{
 
 	/**
 	 * guideRepository
@@ -101,7 +102,7 @@ class Tx_Msrouten_Controller_GuideController extends \TYPO3\CMS\Extbase\Mvc\Cont
 	 * @param Guide $guide
 	 * @return void
 	 */
-	public function Guide $guide) {
+	public function UpdateAction ($guide) {
 		$this->guideRepository->update($guide);
 		$this->flashMessageContainer->add('Your Guide was updated.');
 		$this->redirect('list');

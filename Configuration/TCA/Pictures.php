@@ -1,5 +1,5 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
+if (!defined ('TYPO3')) {
 	die ('Access denied.');
 }
 $GLOBALS['TCA']['tx_msrouten_domain_model_pictures'] = array(
@@ -8,7 +8,6 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_pictures'] = array(
 		'label' => 'picture_wall',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
-		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
 
 		'versioningWS' => 2,
@@ -29,9 +28,7 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_pictures'] = array(
 );
 $GLOBALS['TCA']['tx_msrouten_domain_model_pictures'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_msrouten_domain_model_pictures']['ctrl'],
-	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, picture_wall, wall_pic_bu, wall_pic_alt, wall_pic_title',
-	),
+	'interface' => array(	),
 	'types' => array(
 		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, picture_wall, wall_pic_bu, wall_pic_alt, wall_pic_title,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
@@ -42,29 +39,11 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_pictures'] = array(
 		'sys_language_uid' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
-			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'sys_language',
-				'foreign_table_where' => 'ORDER BY sys_language.title',
-				'items' => array(
-					array('LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0)
-				),
-			),
+			'config' => [
+                'type' => 'language',
+            ],
 		),
-		'l10n_parent' => array(
-			'displayCond' => 'FIELD:sys_language_uid:>:0',
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
-			'config' => array(
-				'type' => 'select',
-				'items' => array(
-					array('', 0),
-				),
-				'foreign_table' => 'tx_msrouten_domain_model_pictures',
-				'foreign_table_where' => 'AND tx_msrouten_domain_model_pictures.pid=###CURRENT_PID### AND tx_msrouten_domain_model_pictures.sys_language_uid IN (-1,0)',
-			),
-		),
+
 		'l10n_diffsource' => array(
 			'config' => array(
 				'type' => 'passthrough',
@@ -78,44 +57,47 @@ $GLOBALS['TCA']['tx_msrouten_domain_model_pictures'] = array(
 				'max' => 255,
 			)
 		),
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-			'config' => array(
-				'type' => 'check',
-			),
-		),
+		'hidden' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'default' => 0,
+                'items' => [
+                    ['label' => '', 'value' => '']
+                ],
+            ],
+        ],
 		'starttime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
-			'config' => array(
-				'type' => 'input',
+			'config' => [
+				'type' => 'datetime',
+         		'format' => 'date',
 				'size' => 13,
-				'max' => 20,
-				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
-				'range' => array(
+				'range' => [
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-			),
+				],
+			],
 		),
 		'endtime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
-			'config' => array(
-				'type' => 'input',
+			'config' => [
+				'type' => 'datetime',
+         		'format' => 'date',
 				'size' => 13,
-				'max' => 20,
-				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
-				'range' => array(
+				'range' => [
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-			),
+				],
+			],
 		),
 		'picture_wall' => array(
 			'exclude' => 0,

@@ -52,7 +52,7 @@ class RoutesRepository extends Repository {
 		if ($mount>0 )  $constraints[] = $query->equals('walls.mounts.uid', $mount);
                 if ($gebirge >0 )  $constraints[] = $query->equals('walls.mounts.gebirge.uid', $gebirge );
 		$query->setOrderings(array( $route_sort_field => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING));   
-		$result = $query->matching( $query->logicalAnd(  $constraints )  )->execute();
+		$result = $query->matching( $query->logicalAnd(  ...array_values($constraints) )  )->execute();
 		return $result;
 	}
 

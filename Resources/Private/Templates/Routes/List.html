@@ -16,31 +16,27 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <br/>
 <f:flashMessages />
 
-<table  class="tx_msrouten" >
-	<tr>
-		<th><f:translate key="tx_msrouten_domain_model_routes.routen_name" /></th>
-		<th>E-Bew. </th>
-		<th>Sterne </th>	
-		<th>Begehungen </th>
-		<th><f:translate key="tx_msrouten_domain_model_routes.level" /></th>
-	
-		
-	</tr>
-	<tr>
+<table  class="tx_msrouten tx_msrouten-list" >
+
 		<f:for each="{routess}" as="routes">
-		<tr>
-			<td rowspan="2"><f:link.action  action="show" arguments="{routes : routes, pdf : FALSE}" pageUid="{singlePID}" > {routes.routenName}  (<f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}"/>)</f:link.action> </td>
-			<td> {routes.elevel}</td>
-			<td><span class="stern stern{routes.beauty}"> </span></td>
-			<td><span class="frequenz frequenz{routes.frequenz}"> </span></td>
-			<td> {routes.level}</td> </tr>
 			<tr>
-			<td><b>Länge:</b> {routes.climbdistance}</td>
-			<td><b>Zeit:</b> {routes.climbtime}</td>
-			<td><b>Expos.:</b> {routes.exposition}</td>
-			<td><b>Ebg.:</b> {routes.erstbegeher}
-   </td>
-	   </tr>
-		</f:for>
+				<th colspan="3">
+					<f:link.action class="tx_routen-list" action="show" arguments="{routes : routes, pdf : FALSE}" pageUid="{singlePID}" >
+						{routes.routenName}  (<f:translate key="tx_msrouten_domain_model_routes.levelshort{routes.levelShort}"/>)
+					</f:link.action> <span class="stern stern{routes.beauty}"> </span>
+				 </th>
+			</tr>
+		
+	
+			<tr>
+				<td><b>E-Bew.: {routes.elevel}</b></td>
+				<td><b>Beliebtheit: <span class="frequenz frequenz{routes.frequenz}"> </b></span></td>
+				<td><b><f:translate key="tx_msrouten_domain_model_routes.level" /> </b>{routes.level}</td> </tr>
+				<tr>
+				<td><b>Länge:</b> {routes.climbdistance}</td>
+				<td><b>Zeit:</b> {routes.climbtime} - <b>Expos.:</b> {routes.exposition}</td>
+				<td><b>Erstbegeher.:</b> {routes.erstbegeher}</td>
+		   </tr>
+			</f:for>
 </table>
 </f:section>

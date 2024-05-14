@@ -1,10 +1,10 @@
 <?php
-if (!defined('TYPO3_MODE')) {
+if (!defined('TYPO3')) {
 	die ('Access denied.');
 }
 
 TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'Bertigolf.msrouten',
+	'msrouten',
 	'Msbergrouten',
 	'msbergrouten'
 );
@@ -15,14 +15,14 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['msrouten_msb
 
 
 TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'Bertigolf.msrouten',
+	'msrouten',
 	'MsbergroutenGebirge',
 	'msbergroutengebirge'
 );
 
 
 TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-		'Bertigolf.msrouten',
+		'msrouten',
 		'MsbergroutenShow',
 		'msbergroutenshow'
 );

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:10:22Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="gebirge.description" resname="gebirge.description" >
+				<source>Gebirgsgruppe</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

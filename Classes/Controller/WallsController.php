@@ -1,5 +1,5 @@
 <?php
-
+namespace Bertigolf\Msrouten\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -25,6 +25,8 @@
  ***************************************************************/
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use Bertigolf\Msrouten\Domain\Model\Walls;
+use Bertigolf\Msrouten\Domain\Repository\WallsRepository;
 /**
  *
  *
@@ -32,12 +34,12 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Msrouten_Controller_WallsController extends ActionController {
+class WallsController extends ActionController {
 
 	/**
 	 * wallsRepository
 	 *
-	 * @var Tx_Msrouten_Domain_Repository_WallsRepository
+	 * @vaWallsRepository
 	 */
 	protected $wallsRepository;
 
@@ -54,31 +56,31 @@ class Tx_Msrouten_Controller_WallsController extends ActionController {
 	/**
 	 * action show
 	 *
-	 * @param Tx_Msrouten_Domain_Model_Walls $walls
+	 * @param Walls $walls
 	 * @return void
 	 */
-	public function showAction(Tx_Msrouten_Domain_Model_Walls $walls) {
+	public function showAction(Walls $walls) {
 		$this->view->assign('walls', $walls);
 	}
 
 	/**
 	 * action new
 	 *
-	 * @param Tx_Msrouten_Domain_Model_Walls $newWalls
+	 * @param Walls $newWalls
 	 * @IgnoreValidation; $newWalls
 	 * @return void
 	 */
-	public function newAction(Tx_Msrouten_Domain_Model_Walls $newWalls = NULL) {
+	public function newAction(Walls $newWalls = NULL) {
 		$this->view->assign('newWalls', $newWalls);
 	}
 
 	/**
 	 * action create
 	 *
-	 * @param Tx_Msrouten_Domain_Model_Walls $newWalls
+	 * @param Walls $newWalls
 	 * @return void
 	 */
-	public function createAction(Tx_Msrouten_Domain_Model_Walls $newWalls) {
+	public function createAction(Walls $newWalls) {
 		$this->wallsRepository->add($newWalls);
 		$this->flashMessageContainer->add('Your new Walls was created.');
 		$this->redirect('list');
@@ -90,7 +92,7 @@ class Tx_Msrouten_Controller_WallsController extends ActionController {
 	 * @param Tx_Msrouten_Domain_Model_Walls $walls
 	 * @return void
 	 */
-	public function editAction(Tx_Msrouten_Domain_Model_Walls $walls) {
+	public function editAction(Walls $walls) {
 		$this->view->assign('walls', $walls);
 	}
 
@@ -100,7 +102,7 @@ class Tx_Msrouten_Controller_WallsController extends ActionController {
 	 * @param Tx_Msrouten_Domain_Model_Walls $walls
 	 * @return void
 	 */
-	public function updateAction(Tx_Msrouten_Domain_Model_Walls $walls) {
+	public function updateAction(Walls $walls) {
 		$this->wallsRepository->update($walls);
 		$this->flashMessageContainer->add('Your Walls was updated.');
 		$this->redirect('list');
@@ -112,7 +114,7 @@ class Tx_Msrouten_Controller_WallsController extends ActionController {
 	 * @param Tx_Msrouten_Domain_Model_Walls $walls
 	 * @return void
 	 */
-	public function deleteAction(Tx_Msrouten_Domain_Model_Walls $walls) {
+	public function deleteAction(Walls $walls) {
 		$this->wallsRepository->remove($walls);
 		$this->flashMessageContainer->add('Your Walls was removed.');
 		$this->redirect('list');
@@ -121,10 +123,10 @@ class Tx_Msrouten_Controller_WallsController extends ActionController {
 	/**
 	 * injectWallsRepository
 	 *
-	 * @param Tx_Msrouten_Domain_Repository_WallsRepository $wallsRepository
+	 * @param WallsRepository $wallsRepository
 	 * @return void
 	 */
-	public function injectWallsRepository(Tx_Msrouten_Domain_Repository_WallsRepository $wallsRepository) {
+	public function injectWallsRepository(WallsRepository $wallsRepository) {
 		$this->wallsRepository = $wallsRepository;
 	}
 

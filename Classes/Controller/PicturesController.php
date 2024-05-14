@@ -24,9 +24,10 @@ namespace Bertigolf\Msrouten\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-use namespace Bertigolf\Msrouten\Domain\Repository\PicturesRepository;
-use namespace Bertigolf\Msrouten\Domain\Model\Pictures;
+use Bertigolf\Msrouten\Domain\Repository\PicturesRepository;
+use  Bertigolf\Msrouten\Domain\Model\Pictures;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 /**
  *
  *
@@ -34,7 +35,7 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Msrouten_Controller_PicturesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class PicturesController extends ActionController {
 	/**
 	 * picturesRepository
 	 *

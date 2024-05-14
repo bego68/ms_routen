@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:10:35Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="picture_wall.description" resname="picture_wall.description" >
+				<source>Bild der Wand</source>
+			</trans-unit>
+			<trans-unit id="wall_pic_bu.description" resname="wall_pic_bu.description" >
+				<source>Bildunterschrift Wandbild</source>
+			</trans-unit>
+			<trans-unit id="wall_pic_alt.description" resname="wall_pic_alt.description" >
+				<source>Alt-Text Wandbild</source>
+			</trans-unit>
+			<trans-unit id="wall_pic_title.description" resname="wall_pic_title.description" >
+				<source>TitleText Wandbild</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

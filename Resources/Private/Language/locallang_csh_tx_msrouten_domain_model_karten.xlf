@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:msrouten/Resources/Private/Language/locallang.xlf" date="2024-04-17T12:10:27Z" product-name="msrouten">
+		<header/>
+		<body>
+			<trans-unit id="karten_name.description" resname="karten_name.description" >
+				<source>Karten Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="nummer.description" resname="nummer.description" >
+				<source>VerlagsNummer</source>
+			</trans-unit>
+			<trans-unit id="massstab.description" resname="massstab.description" >
+				<source>Maßstab</source>
+			</trans-unit>
+			<trans-unit id="land.description" resname="land.description" >
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="isbn13.description" resname="isbn13.description" >
+				<source>ISBN-13 Nummer</source>
+			</trans-unit>
+			<trans-unit id="asin.description" resname="asin.description" >
+				<source>Amazon-ASIN, bzw. ISBN 10</source>
+			</trans-unit>
+			<trans-unit id="stand.description" resname="stand.description" >
+				<source>Bearbeitungsstand</source>
+			</trans-unit>
+			<trans-unit id="zone.description" resname="zone.description" >
+				<source>UTM-Zone</source>
+			</trans-unit>
+			<trans-unit id="li_unten_utm_rechts.description" resname="li_unten_utm_rechts.description" >
+				<source>Eckkoordinaten links unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="uli_unten_utm_hoch.description" resname="uli_unten_utm_hoch.description" >
+				<source>Eckkoordinaten links unten, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="li_oben_utm_rechts.description" resname="li_oben_utm_rechts.description" >
+				<source>Eckkoordinaten links oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="li_oben_utm_hoch.description" resname="li_oben_utm_hoch.description" >
+				<source>Eckkoordinaten links oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="re_oben_utm_rechts.description" resname="re_oben_utm_rechts.description" >
+				<source>Eckkoordinaten rechts oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="re_oben_utm_hoch.description" resname="re_oben_utm_hoch.description" >
+				<source>Eckkoordinaten rechts oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="re_unten_utm_rechts.description" resname="re_unten_utm_rechts.description" >
+				<source>Eckkoordinaten rechts unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="re_unten_utm_hoch.description" resname="re_unten_utm_hoch.description" >
+				<source>Eckkoordinaten rechts unten, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="zone2.description" resname="zone2.description" >
+				<source>Rückseite Zone</source>
+			</trans-unit>
+			<trans-unit id="li_unten_utm_rechts2.description" resname="li_unten_utm_rechts2.description" >
+				<source>Rückseite Eckkoordinaten links unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="li_unten_utm_hoch2.description" resname="li_unten_utm_hoch2.description" >
+				<source>Rückseite Eckkoordinaten links unten, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="li_oben_utm_rechts2.description" resname="li_oben_utm_rechts2.description" >
+				<source>Rückseite Eckkoordinaten links oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="li_oben_utm_hoch2.description" resname="li_oben_utm_hoch2.description" >
+				<source>Rückseite Eckkoordinaten links oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="re_oben_utm_rechts2.description" resname="re_oben_utm_rechts2.description" >
+				<source>Rückseite Eckkoordinaten rechts oben, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="re_oben_utm_hoch2.description" resname="re_oben_utm_hoch2.description" >
+				<source>Rückseite Eckkoordinaten rechts oben, Hochwert</source>
+			</trans-unit>
+			<trans-unit id="re_unten_utm_rechts2.description" resname="re_unten_utm_rechts2.description" >
+				<source>Rückseite Eckkoordinaten rechts unten, Rechtswert</source>
+			</trans-unit>
+			<trans-unit id="re_unten_utm_hoch2.description" resname="re_unten_utm_hoch2.description" >
+				<source>Rückseite Eckkoordinaten rechts unten, Hochwert</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
