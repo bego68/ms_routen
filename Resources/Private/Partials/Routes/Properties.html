@@ -8,22 +8,28 @@
 	        <n:titleTag>
               <f:format.htmlentitiesDecode>Kletterroute {routes.walls.mounts.gebirge.gebirge}:{routes.walls.mounts.mountName}-{routes.routenName}</f:format.htmlentitiesDecode>
             </n:titleTag>
-	<!--
-  =====================
-    Downloadbottom für PDF vorübergehend ausgeblendet
 
-	<div id="funktionsbuttons" class="">
-	<f:image src="fileadmin/images/pdfDownload.png" width="50px" height="50px" alt="PDF Download" title="Als PDF-Datei herunterladen"/>
-	</div>
--->
-
-	
-	
 	   <div class="container">
 		 <h4> <f:link.page pageUid="{routes.walls.mounts.mountWayToBot}">Kletterrouten {routes.walls.mounts.gebirge.gebirge}</f:link.page>  »
 	<f:link.page pageUid="{routes.walls.mounts.mountWayToTop}">{routes.walls.mounts.mountName}</f:link.page> » {routes.walls.wallName}
 		 </h4>
 	   </div>
+	 <f:if condition="{routes.pdf2024}">
+		<f:then>
+			<div class="container pdf-link">
+				<f:link.file file="{routes.pdf2024.0.originalResource}" target="_blank">
+					<f:image 
+					   src="fileadmin/template/ext/web2pdf/Resources/Public/Icons/Extension.png" 
+					   alt="Downlaod als PDF" 
+					   height="30px"/> PDF-Datei zu Drucken
+				</f:link.file>
+			</div>
+		</f:then>
+		<f:else>
+			<f:cObject typoscriptObjectPath="lib.web2pdf" />
+		</f:else>
+	 </f:if>
+
 	<div>
 	 <div class="section section-head">
 	   <div class="container">
